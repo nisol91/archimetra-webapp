@@ -22,14 +22,14 @@ import firebase from "firebase";
 
 //inizializzo firebase
 const firebaseApp = firebase.initializeApp({
-  apiKey: "AIzaSyCW3XY0Dg3E27kaIFM4IfvITbl5pXyw3io",
-  authDomain: "portfolio-f8a45.firebaseapp.com",
-  databaseURL: "https://portfolio-f8a45.firebaseio.com",
-  projectId: "portfolio-f8a45",
-  storageBucket: "portfolio-f8a45.appspot.com",
-  messagingSenderId: "267374463312",
-  appId: "1:267374463312:web:bdcf27db9088ce82fb0455",
-  measurementId: "G-1F4M1LF7NV"
+  apiKey: "AIzaSyCDlPVDPih7_MU4U2V43vxgfF2R3se9wxQ",
+  authDomain: "archimetra-72c69.firebaseapp.com",
+  databaseURL: "https://archimetra-72c69.firebaseio.com",
+  projectId: "archimetra-72c69",
+  storageBucket: "archimetra-72c69.appspot.com",
+  messagingSenderId: "966185168987",
+  appId: "1:966185168987:web:1f2b552754a6e4ddba4f7e",
+  measurementId: "G-XHPJN8MRBQ"
 });
 const db = firebaseApp.firestore();
 export { db };
