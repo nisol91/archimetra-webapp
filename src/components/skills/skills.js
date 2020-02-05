@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Cube from "../cube";
 import { translate } from "react-i18next";
 import reactLogo from "../../img/react.svg";
 import firebaseLogo from "../../img/firebase_logo.png";

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Triangle from "../triangle";
 import "./about.scss";
 import { translate } from "react-i18next";
 
@@ -29,9 +28,9 @@ class About extends Component {
           <h1 className="about3 swing-in-top-fwd">{t("studio_story")}</h1>
           <h1 className="about3 swing-in-top-fwd">{t("studio_story_2")}</h1>
         </div>
-        <div className={`fade-in ${this.state.cubeVisibility && "visible"}`}>
-          <Triangle></Triangle>
-        </div>
+        <div
+          className={`fade-in ${this.state.cubeVisibility && "visible"}`}
+        ></div>
       </div>
     );
   }
