@@ -1,0 +1,51 @@
+@import "src/scss/variables";
+
+* {
+	box-sizing: border-box;
+}
+
+.footer {
+	width: 100%;
+	height: 200px;
+	background: $nav-background-color;
+	margin-bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.iconsContainer {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imgFooter {
+	width: 10%;
+	margin-left: 20px;
+	filter: grayscale(100%);
+}
+
+.socialIcon {
+	font-size: 20px;
+	margin: 20px;
+	color: $link-color;
+
+	&:hover {
+		color: $link-hover-color;
+	}
+}
+
+.reactIcon {
+	font-size: 20px;
+	margin: 20px;
+	color: $link-hover-color;
+
+}
+
+.footerText {
+	margin-top: 2%;
+	font-size: 12px;
+}

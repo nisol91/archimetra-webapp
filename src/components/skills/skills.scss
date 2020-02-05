@@ -1,0 +1,74 @@
+@import "./src/scss/variables";
+
+.boxSkills {
+	background: $link-hover-color;
+	clip-path: polygon(0 0,
+			100% 0,
+			100% 100%,
+			0 calc(100% - 10vw));
+	padding: 70px 110px;
+	display: flex;
+	height: 100vh;
+
+	.skills1 {
+		font-size: 70px;
+		font-weight: bold;
+	}
+
+	.skills2 {
+		font-size: 50px;
+		font-weight: bold;
+		margin-top: 10px;
+		margin-bottom: 50px;
+	}
+
+	.skills3 {
+		font-size: 35px;
+		font-weight: bold;
+		margin-top: 50px;
+		color: $nav-background-color;
+	}
+
+	.skillssx {
+		width: 50%;
+
+	}
+
+	.skillsdx {
+		width: 50%;
+		margin-left: 5%;
+	}
+}
+
+.card_skills {
+	margin: 10px;
+	width: 150px;
+	height: 80px;
+	background: white;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0px 4px 24px -1px rgb(66, 66, 66);
+
+	}
+}
+
+.logosSkills {
+	width: 80px;
+	margin: 10px;
+	max-height: 100%;
+	max-width: 50%;
+	padding: 5px;
+}
+
+.skillCardBox {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}

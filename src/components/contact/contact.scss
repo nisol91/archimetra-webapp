@@ -1,0 +1,15 @@
+@import "src/scss/variables";
+
+* {
+	box-sizing: border-box;
+}
+
+.contact {
+	width: 100%;
+	height: 50vh;
+	padding: 100px;
+	background: $card-link-color;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

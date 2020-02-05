@@ -1,0 +1,114 @@
+@import "src/scss/variables";
+
+* {
+	box-sizing: border-box;
+}
+
+.App {
+	max-width: 420px;
+	margin: 0 auto;
+	opacity: 0;
+	// transition: 1s;
+
+}
+
+.contact2 {
+	font-size: 50px;
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+.charger_container {
+	margin-top: 300px !important;
+	height: 100px;
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: auto;
+}
+
+.text-primary {
+	color: $link-color !important;
+}
+
+.contactSpinner {
+	border: 1.25em solid currentColor !important;
+	height: 20rem !important;
+}
+
+.showed {
+	opacity: 1;
+	transition: 1s;
+}
+
+p {
+	text-align: center;
+	font-weight: 500;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid $link-color;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+	background: $link-color;
+	opacity: 0.5;
+
+	&:focus {
+		outline: none;
+	}
+
+}
+
+::placeholder {
+	color: $nav-background-color;
+
+}
+
+input[type=submit] {
+	background-color: $link-color;
+	color: $nav-background-color;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: 1s;
+	margin: auto;
+
+
+}
+
+input[type=submit]:focus {
+	outline: none;
+}
+
+input[type=submit]:hover {
+	background-color: $link-hover-color;
+	transition: 1s;
+}
+
+.container {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+
+.alert-success {
+	color: $nav-background-color !important;
+	border-color: $link-color !important;
+	background-color: $link-color !important;
+
+}
+
+Map {
+	margin: 30px;
+}

@@ -1,0 +1,291 @@
+@import "./src/scss/variables";
+
+//navbar===============
+.navbarShowedMedia {
+	transform: translateX(0px) !important;
+	// width: 60px !important;
+	transition: 1s;
+
+}
+
+.hideNav {
+	.mynavbar {
+
+		display: none !important;
+	}
+}
+
+.navCont {
+	width: 100px;
+	z-index: 1 !important;
+
+}
+
+.mynavbar {
+	z-index: 1 !important;
+	width: 120px;
+	height: 100vh;
+	background: $nav-background-color;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+
+
+	.overlay1 {
+		opacity: 0;
+		transition: 1s;
+		background: black;
+		border-radius: 5px;
+		color: white;
+		font-size: 12px;
+		padding: 5px;
+	}
+
+	.overlay1Visible {
+		opacity: 0.4;
+		transition: 1s;
+	}
+
+
+
+	.homeIcon {
+		color: $link-color;
+		opacity: 0;
+		height: 30px;
+		width: 30px;
+		position: absolute;
+		top: -5px;
+		left: 7px;
+		z-index: 1;
+		transition: opacity 0.4s ease-in;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hidden {
+		opacity: 0 !important;
+		transition: 2s;
+		cursor: auto;
+	}
+
+	.show_icon {
+		margin-left: 22px !important;
+		opacity: 1;
+		transition: 2s;
+	}
+
+	.arrow_right {
+		font-size: 35px;
+		opacity: 0;
+		color: $link-color;
+
+		&:hover {
+			transition: .5s;
+			color: $link-hover-color;
+			cursor: pointer;
+		}
+	}
+
+	.arrow_right_show {
+		opacity: 1;
+		transition: 2s;
+		margin-left: 50px;
+	}
+
+	.portIcon {
+		left: 14px;
+	}
+
+	.aboutIcon {
+		left: 6px;
+		top: -5px;
+	}
+
+	.contIcon {
+		left: 15px;
+		top: -5px;
+	}
+
+	.userIcon {
+		left: 15px;
+		top: -5px;
+	}
+
+	.skillsIcon {
+		left: 3px;
+		top: -5px;
+	}
+
+	.myLogo {
+		max-width: 100%;
+		opacity: 0.2;
+		transition: opacity 0.4s linear;
+
+		&:hover {
+			opacity: 0.5;
+			transition: opacity 0.4s linear;
+		}
+	}
+
+	.lang {
+		display: flex;
+		margin-top: 10px;
+
+		.langSelect {
+			color: $link-color;
+			font-size: 15px;
+			margin: 5px 5px;
+			cursor: pointer;
+			transition: 1s;
+			font-weight: bold;
+
+			&:hover {
+				color: $page-background-color;
+				transition: 1s;
+
+			}
+		}
+	}
+
+	.socialIcons {
+		margin-top: 60%;
+		display: flex;
+		flex-direction: column;
+
+		a {
+			margin-top: 100%;
+
+			.mysocialicon {
+				font-size: 25px;
+				transition: 1s;
+
+				&:hover {
+					color: $page-background-color;
+					transition: 1s;
+				}
+			}
+		}
+	}
+
+	.myLogoLink {
+		margin-top: 0px !important;
+
+	}
+
+	.mylink {
+		color: $link-color;
+		margin-top: 40px;
+		position: relative;
+
+		.linkFont {
+			font-size: 15px;
+			transition: opacity 0.4s ease-in;
+			font-weight: 800;
+		}
+
+		&:hover {
+			color: $link-hover-color;
+			text-decoration: none;
+
+			.linkFont {
+				transition: opacity 0.4s ease-in;
+				opacity: 0;
+			}
+
+			.homeIcon {
+				opacity: 1;
+				transition: opacity 0.4s ease-in;
+			}
+		}
+	}
+}
+
+.myBarsCont {
+	position: fixed;
+	top: 10px;
+	right: 10%;
+	color: $nav-background-color;
+	opacity: 0;
+
+	.myBars {
+		width: 10px;
+		height: 10px;
+	}
+}
+
+.main {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	background: $page-background-color;
+	overflow: auto;
+
+}
+
+// close button=========
+// COLORS
+$softorange: #f4a259;
+$tomatored: #f25c66;
+$mediumblu: #1e272d;
+
+.close-container {
+	position: relative;
+	margin: 20px 0;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+
+}
+
+.leftright {
+	height: 4px;
+	width: 50px;
+	position: absolute;
+	margin-top: 24px;
+	background-color: $link-color;
+	border-radius: 2px;
+	transform: rotate(45deg);
+	transition: all 0.3s ease-in;
+}
+
+.rightleft {
+	height: 4px;
+	width: 50px;
+	position: absolute;
+	margin-top: 24px;
+	background-color: $link-hover-color;
+	border-radius: 2px;
+	transform: rotate(-45deg);
+	transition: all 0.3s ease-in;
+}
+
+label {
+	color: white;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 0.6em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: all 0.3s ease-in;
+	opacity: 0;
+}
+
+.close {
+	margin: 5px 0 0 5px;
+	position: absolute;
+}
+
+.close-container:hover .leftright {
+	transform: rotate(-45deg);
+	background-color: $link-hover-color;
+}
+
+.close-container:hover .rightleft {
+	transform: rotate(45deg);
+	background-color: $page-background-color;
+}
+
+.close-container:hover label {
+	opacity: 1;
+}

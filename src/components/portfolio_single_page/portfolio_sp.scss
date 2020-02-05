@@ -1,0 +1,151 @@
+@import "./src/scss/variables";
+
+//portfolioSp=========================
+.boxPortfolioSp {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	.home1 {
+		font-size: 70px;
+		font-weight: bold;
+	}
+
+	.home2 {
+		font-size: 50px;
+		font-weight: bold;
+		margin-top: 50px;
+	}
+
+	.home3 {
+		font-size: 30px;
+		font-weight: bold;
+		margin-top: 50px;
+	}
+}
+
+.boxHome {
+	background: $link-hover-color;
+	width: 100%;
+	padding: 110px;
+	height: 100vh;
+	clip-path: polygon(0 0,
+			100% 0,
+			100% 100%,
+			0 calc(100% - 10vw));
+}
+
+.Toastify__toast-container--top-right {
+	top: 3.5em !important;
+}
+
+.Toastify__toast--default {
+	background: $nav-background-color !important;
+	color: $link-color !important;
+}
+
+.Toastify__progress-bar--default {
+	background: $link-color !important;
+}
+
+.Toastify__toast {}
+
+.myBtnContact {
+	margin-top: 60px;
+	width: 200px;
+	height: 50px;
+	background: $link-color;
+	color: $nav-background-color;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 1s;
+	font-size: 20px;
+	cursor: pointer;
+
+	&:hover {
+
+		transition: 1s;
+		transform: translateX(10px);
+		color: $link-color;
+		background: $nav-background-color;
+		text-decoration: line-through;
+	}
+}
+
+.navbar {
+	box-shadow: 0px 4px 24px -1px rgb(66, 66, 66);
+	width: 100%;
+	height: 70px;
+	background: $nav-background-color;
+	z-index: 9999;
+	padding: 0 15%;
+}
+
+.mylink_portfolio {
+	color: #212529 !important;
+
+	&:hover {
+		color: #212529 !important;
+	}
+}
+
+.showNavBtn {
+	display: none;
+}
+
+
+
+.navItem {
+	position: relative;
+
+	cursor: pointer;
+
+	&:hover {
+		transform: translateY(-3px);
+		text-decoration: overline;
+	}
+}
+
+.active {
+	text-decoration: line-through !important;
+}
+
+.dot {
+	background: rgb(43, 43, 44);
+	width: 5px;
+	height: 5px;
+	position: absolute;
+	top: 25px;
+	left: 45%;
+	border-radius: 100%;
+
+	display: none;
+}
+
+.dotActive {
+	display: inherit;
+}
+
+.scrollTrigger {
+	position: absolute;
+	margin-top: 20%;
+	width: 100px;
+	height: 25vh;
+	// background: red;
+	z-index: 9998;
+}
+
+.aboutPlaceholder {
+	width: 100%;
+	height: 100vh;
+}
+
+.contactsPlaceholder {
+	width: 100%;
+	background:
+		$card-link-color;
+	height: 50vh;
+}

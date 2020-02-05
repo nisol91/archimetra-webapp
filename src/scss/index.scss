@@ -1,0 +1,72 @@
+@import "variables";
+@import "transitions";
+@import "media_query";
+
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow: auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none !important;
+  color: $link-color !important;
+
+  &:hover {
+    text-decoration: none;
+    color: $link-color !important;
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background: grey;
+}
+
+.contenitore {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: $page-background-color;
+  overflow: auto;
+
+  .main {
+    width: 100%;
+  }
+}
+
+
+
+//===========THREE JS=====
+//contenitori
+#c {
+  width: 600px;
+  height: 600px;
+}
+
+#t {
+  width: 600px;
+  height: 600px;
+}
+
+#s {
+  width: 600px;
+  height: 600px;
+}

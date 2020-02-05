@@ -1,0 +1,38 @@
+@import "./src/scss/variables";
+
+.boxAbout {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	margin-top: 100px;
+
+	.aboutcontainer {
+		height: 100vh;
+		padding: 30px;
+		margin-left: 6%;
+		margin-top: 10px;
+		margin-right: 7%;
+
+		.about1 {
+			font-size: 70px;
+			font-weight: bold;
+		}
+
+		.about2 {
+			font-size: 50px;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+
+		.about3 {
+			font-size: 30px;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+	}
+}
+
+.triangle {
+	width: 100%;
+	height: auto;
+}
