@@ -26,14 +26,14 @@
 }
 
 .boxHome {
-	background: white;
 	width: 100%;
-	padding: 110px;
-	height: 100vh;
-	clip-path: polygon(0 0,
-			100% 0,
-			100% 100%,
-			0 calc(100% - 10vw));
+	height: auto;
+
+}
+
+.homeImg {
+	width: 100%;
+	height: 100%;
 }
 
 .Toastify__toast-container--top-right {
@@ -77,27 +77,30 @@
 
 .navbar {
 	width: 100%;
-	height: 140px;
+	height: 160px;
 	background: transparent;
 	position: fixed;
 	top: 0;
 	z-index: 9999;
-	transition: 1s;
+	transition: .5s;
 
+}
+
+.logoNav {
+	max-width: 100px;
 }
 
 .coloredNav {
 	background: $navbar-color;
 	box-shadow: 0px 4px 24px -1px rgb(66, 66, 66);
-	height: 110px;
-
-	transition: 1s;
+	height: 130px;
+	transition: .5s;
 }
 
 .topNavbar {
 	width: 100%;
-	height: 30px;
-	background: red;
+	height: auto;
+	padding: 10px 0;
 }
 
 .bottomNavbar {
@@ -109,10 +112,10 @@
 }
 
 .mylink_portfolio {
-	color: white !important;
+	color: $navbar-item-color !important;
 
 	&:hover {
-		color: #212529 !important;
+		color: $navbar-item-color !important;
 	}
 }
 
@@ -126,26 +129,26 @@
 	position: relative;
 
 	cursor: pointer;
+	display: flex !important;
+	justify-content: space-between;
+	align-items: center;
 
-	&:hover {
-		transform: translateY(-3px);
-		text-decoration: overline;
-	}
+	&:hover {}
+}
+
+.separatorNavItem {
+	color: $navbar-item-borders-color;
+	margin-left: 30px;
 }
 
 .active {
-	text-decoration: line-through !important;
+	width: 100%;
+	height: 100%;
+	border: .5px solid $navbar-item-borders-color;
+	padding: 5px 15px;
 }
 
-.dot {
-	border: 1px solid rgb(43, 43, 44);
-	width: 90px;
-	height: 30px;
-	top: -15%;
-	right: 10%;
-	position: absolute;
-	display: none;
-}
+
 
 .dotActive {
 	display: inherit;
@@ -170,4 +173,43 @@
 	background:
 		$card-link-color;
 	height: 50vh;
+}
+
+.lineThroughNav {
+	position: relative;
+	display: block;
+	cursor: pointer;
+}
+
+.lineThroughNav:before,
+.lineThroughNav:after {
+	content: "";
+	position: absolute;
+	width: 0%;
+	height: 1px;
+	top: 50%;
+	margin-top: -0.5px;
+	background: $navbar-item-borders-color;
+}
+
+.lineThroughNav:before {
+	left: -2.5px;
+}
+
+.lineThroughNav:after {
+	right: 2.5px;
+	background: $navbar-item-borders-color;
+	transition: width 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.lineThroughNav:hover:before {
+	background: $navbar-item-borders-color;
+	width: 100%;
+	transition: width 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.lineThroughNav:hover:after {
+	background: transparent;
+	width: 100%;
+	transition: 0s;
 }

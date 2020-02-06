@@ -61,8 +61,8 @@ class PortfolioSp extends Component {
         { id: 2, name: "LO STUDIO", ref: "projects", offset: -80 },
         { id: 3, name: "PORTFOLIO", ref: "about", offset: -80 },
         { id: 4, name: "PARTNERS", ref: "skills", offset: -80 },
-        { id: 5, name: "IL TEAM", ref: "skills", offset: -80 }
-        // { id: 6, name: "CONTATTACI", ref: "contacts", offset: -80 }
+        { id: 5, name: "IL TEAM", ref: "skills", offset: -80 },
+        { id: 6, name: "CONTATTACI", ref: "contacts", offset: -80 }
       ]
     };
   }
@@ -84,7 +84,7 @@ class PortfolioSp extends Component {
 
   scrollTo(element, offset) {
     scroller.scrollTo(element, {
-      duration: 800,
+      duration: 400,
       delay: 0,
       smooth: "easeInOutQuart",
       offset: offset
@@ -241,17 +241,27 @@ class PortfolioSp extends Component {
             "coloredNav slide-in-top"} ${this.state.hideNavbar &&
             "hide slide-in-top"}`}
         >
-          <div className="topNavbar"></div>
+          <div className="topNavbar">
+            <div className="firstRow">archi@mail</div>
+            <div className="secondRow">
+              <img
+                className="logoNav"
+                src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/archimetra_logo.png?alt=media&token=2c8ae350-b677-4aab-a10a-00e98ffa6033"
+                alt=""
+              />
+            </div>
+          </div>
           <div className="bottomNavbar">
             <div
               className={`showNavBtn ${this.state.hideNavbar && "hide"} `}
               onClick={this.showNavbar}
             ></div>
             {this.state.navItems.map((item, key) => (
-              <div className="navItem" key={item.id}>
+              <div className="navItem " key={item.id}>
                 <ScrollLink
                   to={""}
-                  className={`mylink_portfolio ${this.state.skillsNavVisible &&
+                  className={`mylink_portfolio lineThroughNav ${this.state
+                    .skillsNavVisible &&
                     item.name === "PARTNERS" &&
                     "active"} ${this.state.projectsNavVisible &&
                     item.name === "PORTFOLIO" &&
@@ -287,6 +297,9 @@ class PortfolioSp extends Component {
                     item.name === "CONTATTACI" &&
                     "dotActive"}`}
                 ></div>
+                {item.id != 6 ? (
+                  <div className="separatorNavItem">/</div>
+                ) : null}
               </div>
             ))}
           </div>
@@ -299,9 +312,12 @@ class PortfolioSp extends Component {
         <Element name="home"></Element>
 
         <div className="boxHome">
+          <img
+            className="homeImg"
+            src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/proj1.jpg?alt=media&token=1c349bd4-5350-46fb-88e2-d3b07e280ac3"
+            alt=""
+          />
           <h1 className="home1 text-flicker-in-glow">Hey</h1>
-          <h1 className="home2 tracking-in-expand">{t("this_is_downhill")}</h1>
-          <h1 className="home3 swing-in-top-fwd">{t("what_we_love")}</h1>
           <ScrollLink
             to={""}
             className="mylink_portfolio"
