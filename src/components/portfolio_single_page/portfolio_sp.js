@@ -238,7 +238,7 @@ class PortfolioSp extends Component {
         </div>
         <div
           className={`navbar fixedMobileNav ${this.state.toggleNav &&
-            "fixedNav slide-in-top"} ${this.state.hideNavbar &&
+            "coloredNav slide-in-top"} ${this.state.hideNavbar &&
             "hide slide-in-top"}`}
         >
           <div className="topNavbar"></div>
