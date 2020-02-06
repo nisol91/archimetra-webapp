@@ -8,6 +8,8 @@ import Projects from "../projects/projects";
 import Footer from "../footer/footer";
 import About from "../about/about";
 import Skills from "../skills/skills";
+import Partners from "../partners/partners";
+
 import {
   Link as ScrollLink,
   Element,
@@ -52,18 +54,22 @@ class PortfolioSp extends Component {
       aboutNavVisible: false,
       homeNavVisible: false,
       contactsNavVisible: false,
+      partnersNavVisible: false,
+
       skillsVisible: false,
       projectsVisible: false,
       aboutVisible: false,
       homeVisible: false,
       contactsVisible: false,
+      partnersVisible: false,
+
       hideNavbar: true,
 
       navItems: [
         { id: 1, name: "HOME", ref: "home", offset: -80 },
-        { id: 2, name: "LO STUDIO", ref: "projects", offset: -80 },
-        { id: 3, name: "PORTFOLIO", ref: "about", offset: -80 },
-        { id: 4, name: "PARTNERS", ref: "skills", offset: -80 },
+        { id: 2, name: "LO STUDIO", ref: "about", offset: -80 },
+        { id: 3, name: "PORTFOLIO", ref: "projects", offset: -80 },
+        { id: 4, name: "PARTNERS", ref: "partners", offset: -80 },
         { id: 5, name: "IL TEAM", ref: "skills", offset: -80 },
         { id: 6, name: "CONTATTACI", ref: "contacts", offset: -80 }
       ]
@@ -162,6 +168,21 @@ class PortfolioSp extends Component {
   onExitViewportContacts = () => {
     this.setState({
       contactsNavVisible: false
+    });
+    // console.log(this.state.visible);
+  };
+
+  onEnterViewportPartners = () => {
+    this.setState({
+      partnersVisible: true,
+      partnersNavVisible: true
+    });
+    // console.log(this.state.visible);
+  };
+
+  onExitViewportPartners = () => {
+    this.setState({
+      partnersNavVisible: false
     });
     // console.log(this.state.visible);
   };
@@ -275,16 +296,19 @@ class PortfolioSp extends Component {
                   to={""}
                   className={`mylink_portfolio lineThroughNav ${this.state
                     .skillsNavVisible &&
-                    item.name === "PARTNERS" &&
+                    item.name === "IL TEAM" &&
                     "active"} ${this.state.projectsNavVisible &&
                     item.name === "PORTFOLIO" &&
                     "active"} ${this.state.aboutNavVisible &&
-                    item.name === "About" &&
+                    item.name === "LO STUDIO" &&
                     "active"} ${this.state.homeNavVisible &&
                     item.name === "HOME" &&
                     "active"} ${this.state.contactsNavVisible &&
                     item.name === "CONTATTACI" &&
-                    "active"}`}
+                    "active"}
+                    ${this.state.partnersNavVisible &&
+                      item.name === "PARTNERS" &&
+                      "active"}`}
                   onClick={() => {
                     this.setState({
                       scrollContacts: true,
@@ -297,19 +321,7 @@ class PortfolioSp extends Component {
                 >
                   {item.name}
                 </ScrollLink>
-                <div
-                  className={`dot ${this.state.skillsNavVisible &&
-                    item.name === "PARTNERS" &&
-                    "dotActive"} ${this.state.projectsNavVisible &&
-                    item.name === "PORTFOLIO" &&
-                    "dotActive"} ${this.state.aboutNavVisible &&
-                    item.name === "About" &&
-                    "dotActive"} ${this.state.homeNavVisible &&
-                    item.name === "HOME" &&
-                    "dotActive"} ${this.state.contactsNavVisible &&
-                    item.name === "CONTATTACI" &&
-                    "dotActive"}`}
-                ></div>
+
                 {item.id != 6 ? (
                   <div className="separatorNavItem">/</div>
                 ) : null}
@@ -354,6 +366,16 @@ class PortfolioSp extends Component {
         <div>
           <div>{/* <ToastContainer /> */}</div>
         </div>
+        <div>
+          <ScrollTrigger
+            className="scrollTrigger"
+            onEnter={this.onEnterViewportAbout}
+            onExit={this.onExitViewportAbout}
+          ></ScrollTrigger>
+          <Element name="about" className="aboutPlaceholder">
+            {this.state.aboutVisible ? <About id="about"></About> : null}
+          </Element>
+        </div>
         {this.state.scrollProjects ? (
           <div>
             <ScrollTrigger
@@ -369,11 +391,11 @@ class PortfolioSp extends Component {
         <div>
           <ScrollTrigger
             className="scrollTrigger"
-            onEnter={this.onEnterViewportAbout}
-            onExit={this.onExitViewportAbout}
+            onEnter={this.onEnterViewportPartners}
+            onExit={this.onExitViewportPartners}
           ></ScrollTrigger>
-          <Element name="about" className="aboutPlaceholder">
-            {this.state.aboutVisible ? <About id="about"></About> : null}
+          <Element name="partners">
+            <Partners id="partners"></Partners>
           </Element>
         </div>
         <div>

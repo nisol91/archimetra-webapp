@@ -49,3 +49,13 @@
 	margin-top: 2%;
 	font-size: 12px;
 }
+
+.nsLink {
+	padding-top: 10px;
+	padding-left: 15px;
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+
+}

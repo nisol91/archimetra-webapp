@@ -94,6 +94,17 @@ class Footer extends Component {
           <h5 className="footerText">and</h5>
           <img class="imgFooter" src={firebaseLogo} alt="" />
         </div>
+        <div className="iconsContainer">
+          <h5 className="footerText">Brewed by</h5>
+          <a
+            className="nsLink"
+            href="https://nszdeveloper.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            nszdev
+          </a>
+        </div>
       </div>
     );
   }
