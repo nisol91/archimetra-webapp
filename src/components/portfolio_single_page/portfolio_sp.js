@@ -72,7 +72,27 @@ class PortfolioSp extends Component {
         { id: 4, name: "PARTNERS", ref: "partners", offset: -80 },
         { id: 5, name: "IL TEAM", ref: "skills", offset: -80 },
         { id: 6, name: "CONTATTACI", ref: "contacts", offset: -80 }
-      ]
+      ],
+      headPics: [
+        {
+          id: 1,
+          name: "1",
+          ref: ""
+        },
+        {
+          id: 2,
+          name: "2",
+          ref:
+            "https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/proj2.jpg?alt=media&token=275ae759-ea0d-412a-95b7-81e27ee2e01e"
+        },
+        {
+          id: 3,
+          name: "3",
+          ref:
+            "https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/proj1.jpg?alt=media&token=1c349bd4-5350-46fb-88e2-d3b07e280ac3"
+        }
+      ],
+      picIndex: 1
     };
   }
 
@@ -84,6 +104,7 @@ class PortfolioSp extends Component {
     this.fetchProjects();
     window.addEventListener("scroll", this.handleScroll, true);
     scrollSpy.update();
+    // this.changePic();
   }
 
   //toast component
@@ -236,6 +257,16 @@ class PortfolioSp extends Component {
     this.setState({ hideNavbar: !this.state.hideNavbar });
   };
 
+  changePic() {
+    setInterval(() => {
+      var int = Math.floor(Math.random() * 2) + 1;
+      this.setState({ picIndex: this.state.headPics[int] });
+      console.log("====================================");
+      console.log(int);
+      console.log("====================================");
+    }, 1000);
+  }
+
   //RENDER DEL COMPONENTE=======
 
   render() {
@@ -337,11 +368,7 @@ class PortfolioSp extends Component {
         <Element name="home"></Element>
 
         <div className="boxHome">
-          <img
-            className="homeImg"
-            src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/proj1.jpg?alt=media&token=1c349bd4-5350-46fb-88e2-d3b07e280ac3"
-            alt=""
-          />
+          <img className="homeImg" src={this.state.picIndex.ref} alt="" />
           <div className="textHomeBox">
             <h1 className="home1 text-flicker-in-glow">ARCHIMETRA</h1>
             <ScrollLink
