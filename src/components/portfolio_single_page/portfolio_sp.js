@@ -342,25 +342,27 @@ class PortfolioSp extends Component {
             src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/proj1.jpg?alt=media&token=1c349bd4-5350-46fb-88e2-d3b07e280ac3"
             alt=""
           />
-          <h1 className="home1 text-flicker-in-glow">Hey</h1>
-          <ScrollLink
-            to={""}
-            className="mylink_portfolio"
-            onClick={() => {
-              this.setState({ scrollContacts: true, scrollProjects: true });
+          <div className="textHomeBox">
+            <h1 className="home1 text-flicker-in-glow">ARCHIMETRA</h1>
+            <ScrollLink
+              to={""}
+              className=""
+              onClick={() => {
+                this.setState({ scrollContacts: true, scrollProjects: true });
 
-              setTimeout(() => {
-                this.scrollTo("contacts", -5);
-              }, 300);
-            }}
-          >
-            <div
-              className={`myBtnContact ${this.state.toggleClass &&
-                "swing-in-top-fwd"}`}
+                setTimeout(() => {
+                  this.scrollTo("contacts", -5);
+                }, 300);
+              }}
             >
-              {t("contacts")}
-            </div>
-          </ScrollLink>
+              <div
+                className={`myBtnContact ${this.state.toggleClass &&
+                  "swing-in-top-fwd"}`}
+              >
+                SCOPRI I NOSTRI LAVORI
+              </div>
+            </ScrollLink>
+          </div>
         </div>
 
         <div>

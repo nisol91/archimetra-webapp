@@ -28,7 +28,18 @@
 .boxHome {
 	width: 100%;
 	height: auto;
+	position: relative;
+}
 
+.textHomeBox {
+	position: absolute;
+	width: 100%;
+	height: 400px;
+	top: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .homeImg {
@@ -121,6 +132,8 @@
 
 .firstRow {
 	display: flex;
+	border-bottom: .5px dotted $navbar-item-borders-color;
+
 }
 
 .navIcon {
@@ -144,6 +157,9 @@
 
 .mylink_portfolio {
 	color: $navbar-item-color !important;
+	width: 100%;
+	height: 100%;
+	padding: 5px 15px;
 
 	&:hover {
 		color: $navbar-item-color !important;
@@ -164,6 +180,7 @@
 	justify-content: space-between;
 	align-items: center;
 
+
 	&:hover {}
 }
 
@@ -175,8 +192,8 @@
 .active {
 	width: 100%;
 	height: 100%;
-	border: .5px solid $navbar-item-borders-color;
 	padding: 5px 15px;
+	border: .5px solid $navbar-item-borders-color;
 }
 
 
