@@ -57,11 +57,12 @@ class PortfolioSp extends Component {
       hideNavbar: true,
 
       navItems: [
-        { id: 1, name: "Home", ref: "home", offset: -80 },
-        { id: 2, name: "Projects", ref: "projects", offset: -80 },
-        { id: 3, name: "About", ref: "about", offset: -80 },
-        { id: 4, name: "Skills", ref: "skills", offset: -80 },
-        { id: 5, name: "Contact", ref: "contacts", offset: -80 }
+        { id: 1, name: "HOME", ref: "home", offset: -80 },
+        { id: 2, name: "LO STUDIO", ref: "projects", offset: -80 },
+        { id: 3, name: "PORTFOLIO", ref: "about", offset: -80 },
+        { id: 4, name: "PARTNERS", ref: "skills", offset: -80 },
+        { id: 5, name: "IL TEAM", ref: "skills", offset: -80 }
+        // { id: 6, name: "CONTATTACI", ref: "contacts", offset: -80 }
       ]
     };
   }
@@ -240,49 +241,55 @@ class PortfolioSp extends Component {
             "fixedNav slide-in-top"} ${this.state.hideNavbar &&
             "hide slide-in-top"}`}
         >
-          <div
-            className={`showNavBtn ${this.state.hideNavbar && "hide"} `}
-            onClick={this.showNavbar}
-          ></div>
-          {this.state.navItems.map((item, key) => (
-            <div className="navItem" key={item.id}>
-              <ScrollLink
-                to={""}
-                className={`mylink_portfolio ${this.state.skillsNavVisible &&
-                  item.name === "Skills" &&
-                  "active"} ${this.state.projectsNavVisible &&
-                  item.name === "Projects" &&
-                  "active"} ${this.state.aboutNavVisible &&
-                  item.name === "About" &&
-                  "active"} ${this.state.homeNavVisible &&
-                  item.name === "Home" &&
-                  "active"} ${this.state.contactsNavVisible &&
-                  item.name === "Contact" &&
-                  "active"}`}
-                onClick={() => {
-                  this.setState({ scrollContacts: true, scrollProjects: true });
-                  setTimeout(() => {
-                    this.scrollTo(item.ref, item.offset);
-                  }, 300);
-                }}
-              >
-                {item.name}
-              </ScrollLink>
-              <div
-                className={`dot ${this.state.skillsNavVisible &&
-                  item.name === "Skills" &&
-                  "dotActive"} ${this.state.projectsNavVisible &&
-                  item.name === "Projects" &&
-                  "dotActive"} ${this.state.aboutNavVisible &&
-                  item.name === "About" &&
-                  "dotActive"} ${this.state.homeNavVisible &&
-                  item.name === "Home" &&
-                  "dotActive"} ${this.state.contactsNavVisible &&
-                  item.name === "Contact" &&
-                  "dotActive"}`}
-              ></div>
-            </div>
-          ))}
+          <div className="topNavbar"></div>
+          <div className="bottomNavbar">
+            <div
+              className={`showNavBtn ${this.state.hideNavbar && "hide"} `}
+              onClick={this.showNavbar}
+            ></div>
+            {this.state.navItems.map((item, key) => (
+              <div className="navItem" key={item.id}>
+                <ScrollLink
+                  to={""}
+                  className={`mylink_portfolio ${this.state.skillsNavVisible &&
+                    item.name === "PARTNERS" &&
+                    "active"} ${this.state.projectsNavVisible &&
+                    item.name === "PORTFOLIO" &&
+                    "active"} ${this.state.aboutNavVisible &&
+                    item.name === "About" &&
+                    "active"} ${this.state.homeNavVisible &&
+                    item.name === "HOME" &&
+                    "active"} ${this.state.contactsNavVisible &&
+                    item.name === "CONTATTACI" &&
+                    "active"}`}
+                  onClick={() => {
+                    this.setState({
+                      scrollContacts: true,
+                      scrollProjects: true
+                    });
+                    setTimeout(() => {
+                      this.scrollTo(item.ref, item.offset);
+                    }, 300);
+                  }}
+                >
+                  {item.name}
+                </ScrollLink>
+                <div
+                  className={`dot ${this.state.skillsNavVisible &&
+                    item.name === "PARTNERS" &&
+                    "dotActive"} ${this.state.projectsNavVisible &&
+                    item.name === "PORTFOLIO" &&
+                    "dotActive"} ${this.state.aboutNavVisible &&
+                    item.name === "About" &&
+                    "dotActive"} ${this.state.homeNavVisible &&
+                    item.name === "HOME" &&
+                    "dotActive"} ${this.state.contactsNavVisible &&
+                    item.name === "CONTATTACI" &&
+                    "dotActive"}`}
+                ></div>
+              </div>
+            ))}
+          </div>
         </div>
         <ScrollTrigger
           className="scrollTrigger"
