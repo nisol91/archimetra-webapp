@@ -17,6 +17,9 @@ import {
 } from "react-scroll";
 import ScrollTrigger from "react-scroll-trigger";
 import HamburgerMenu from "react-hamburger-menu";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faMobile, faAddressCard } from "@fortawesome/free-solid-svg-icons";
 
 import firebase from "firebase";
 
@@ -242,10 +245,20 @@ class PortfolioSp extends Component {
             "hide slide-in-top"}`}
         >
           <div className="topNavbar">
-            <div className="firstRow">archi@mail</div>
+            <div
+              className={`firstRow  ${this.state.toggleNav && "hideFirstRow"} `}
+            >
+              <h1 className="topText">
+                <FontAwesomeIcon icon={faMobile} className="navIcon" />
+                0521 618082
+              </h1>
+              <FontAwesomeIcon icon={faAddressCard} className="navIcon" />
+              <h1 className="topText">tecnico@archimetrastudio.it</h1>
+            </div>
             <div className="secondRow">
               <img
-                className="logoNav"
+                className={`logoNav  ${this.state.toggleNav &&
+                  "logoNavSmall"} `}
                 src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/archimetra_logo.png?alt=media&token=2c8ae350-b677-4aab-a10a-00e98ffa6033"
                 alt=""
               />
