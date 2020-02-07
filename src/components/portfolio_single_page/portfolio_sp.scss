@@ -47,7 +47,7 @@
 }
 
 .homeImg {
-	transition: 1s;
+	filter: brightness(.7);
 	height: 100%;
 	width: 1200px;
 	-webkit-box-reflect: below 0px -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(90%, transparent), to(rgba(255, 255, 255, 0.589)));
