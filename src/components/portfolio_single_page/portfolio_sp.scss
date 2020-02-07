@@ -28,8 +28,11 @@
 
 .boxHome {
 	width: 100%;
-	height: 700px;
+	height: 100vh;
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .textHomeBox {
@@ -46,7 +49,7 @@
 .homeImg {
 	transition: 1s;
 	height: 100%;
-	width: 100%;
+	width: 1200px;
 	-webkit-box-reflect: below 0px -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(90%, transparent), to(rgba(255, 255, 255, 0.589)));
 }
 

@@ -64,6 +64,7 @@ class PortfolioSp extends Component {
       partnersVisible: false,
 
       hideNavbar: true,
+      imgVisible: false,
 
       navItems: [
         { id: 1, name: "HOME", ref: "home", offset: -80 },
@@ -92,7 +93,8 @@ class PortfolioSp extends Component {
             "https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/proj1.jpg?alt=media&token=1c349bd4-5350-46fb-88e2-d3b07e280ac3"
         }
       ],
-      picIndex: 1
+      picIndex: 1,
+      picInt: 0
     };
   }
 
@@ -104,7 +106,7 @@ class PortfolioSp extends Component {
     this.fetchProjects();
     window.addEventListener("scroll", this.handleScroll, true);
     scrollSpy.update();
-    // this.changePic();
+    this.changePic();
   }
 
   //toast component
@@ -260,11 +262,18 @@ class PortfolioSp extends Component {
   changePic() {
     setInterval(() => {
       var int = Math.floor(Math.random() * 2) + 1;
-      this.setState({ picIndex: this.state.headPics[int] });
-      console.log("====================================");
-      console.log(int);
-      console.log("====================================");
-    }, 1000);
+      if (int !== this.state.picInt) {
+        this.setState({
+          picIndex: this.state.headPics[int],
+          imgVisible: true,
+          picInt: int
+        });
+        console.log(int);
+        setTimeout(() => {
+          this.setState({ imgVisible: false });
+        }, 2400);
+      }
+    }, 3000);
   }
 
   //RENDER DEL COMPONENTE=======
@@ -368,7 +377,11 @@ class PortfolioSp extends Component {
         <Element name="home"></Element>
 
         <div className="boxHome">
-          <img className="homeImg" src={this.state.picIndex.ref} alt="" />
+          <img
+            className={`homeImg fade-in ${this.state.imgVisible && "visible"}`}
+            src={this.state.picIndex.ref}
+            alt=""
+          />
           <div className="textHomeBox">
             <h1 className="home1 text-flicker-in-glow">ARCHIMETRA</h1>
             <ScrollLink
