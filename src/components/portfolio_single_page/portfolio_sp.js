@@ -42,7 +42,6 @@ export { db };
 class PortfolioSp extends Component {
   constructor(props) {
     super(props);
-    this.addProject = this.addProject.bind(this);
     this.state = {
       cubeVisibility: false,
       toggleClass: true,
@@ -217,21 +216,7 @@ class PortfolioSp extends Component {
         // console.log("=========");
       });
   }
-  addProject() {
-    // console.log("inizio");
 
-    db.collection("projects")
-      .add({
-        name: " projectLos Angeles",
-        description: "bello"
-      })
-      .then(function() {
-        // console.log("Document successfully written!");
-      })
-      .catch(function(error) {
-        console.error("Error writing document: ", error);
-      });
-  }
   showNavbar = () => {
     this.setState({ hideNavbar: !this.state.hideNavbar });
   };

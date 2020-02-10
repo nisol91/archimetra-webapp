@@ -1,45 +1,75 @@
 import React, { Component } from "react";
-import axios from "axios";
 import Card from "../card/card";
-import ProgressBar from "react-bootstrap/ProgressBar";
 import "./projects.scss";
 import { translate } from "react-i18next";
-import reactLogo from "../../img/react.svg";
-import firebaseLogo from "../../img/firebase_logo.png";
 import { db } from "../portfolio_single_page/portfolio_sp";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+import { isMobile } from "react-device-detect";
 
 class Projects extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      test: "",
       firebaseProjects: [],
       projectsVisibility: true,
       contentDidMount: false,
-      bar: 0
+      deviceType: ""
     };
   }
 
   async fetchProjects() {
     await db
       .collection("projects")
-      .orderBy("id")
       .get()
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
-        // console.log("=====PROJECTS====");
-        // console.log(data);
-        // console.log("=====PROJECTS====");
+        console.log("=====PROJECTS====");
+        console.log(data);
+        console.log("=====PROJECTS====");
         this.setState({ firebaseProjects: data, projectsVisibility: true });
       });
   }
 
+  isMobile() {
+    if (isMobile === true) {
+      this.setState({ deviceType: "mobile" });
+    } else {
+      this.setState({ deviceType: "browser" });
+    }
+    setTimeout(() => {
+      console.log("====================================");
+      console.log(this.state.deviceType);
+      console.log(isMobile);
+      console.log("====================================");
+    }, 1500);
+  }
+
   componentDidMount() {
     this.fetchProjects();
+    this.isMobile();
   }
   render() {
     const { t } = this.props;
+
+    const responsive = {
+      desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 4,
+        partialVisibilityGutter: 40
+      },
+      tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2,
+        partialVisibilityGutter: 40
+      },
+      mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1,
+        partialVisibilityGutter: 40
+      }
+    };
 
     return (
       <div className={`fade-in ${this.state.projectsVisibility && "visible"}`}>
@@ -60,12 +90,36 @@ class Projects extends Component {
             className={`works fade-in ${this.state.projectsVisibility &&
               "visible"}`}
           >
-            progetti
-            {this.state.firebaseProjects.map((project, index) => (
-              <React.Fragment key={index}>
-                <Card key={index} datiPerCard={project} />
-              </React.Fragment>
-            ))}
+            <div className="carouselContainer">
+              <Carousel
+                swipeable={true}
+                draggable={true}
+                showDots={true}
+                responsive={responsive}
+                ssr={true} // means to render carousel on server-side.
+                infinite={true}
+                autoPlay={this.state.deviceType === "mobile" ? false : true}
+                autoPlaySpeed={3000}
+                keyBoardControl={true}
+                customTransition="all .5s"
+                transitionDuration={500}
+                containerClass="carousel-container"
+                removeArrowOnDeviceType={["tablet", "mobile"]}
+                deviceType={this.state.deviceType}
+                dotListClass="custom-dot-list-style"
+                itemClass="carousel-item-padding-40-px"
+                focusOnSelect={false}
+              >
+                {this.state.firebaseProjects.map((project, index) => (
+                  <React.Fragment key={index}>
+                    <div key={index} className="carouselElement">
+                      {/* <h1>{project.name}</h1> */}
+                      <img className="carouselImg" src={project.img} alt="" />
+                    </div>
+                  </React.Fragment>
+                ))}
+              </Carousel>
+            </div>
           </div>
         </div>
       </div>

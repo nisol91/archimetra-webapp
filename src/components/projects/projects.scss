@@ -2,7 +2,6 @@
 
 //portfolio==========================
 
-
 .cardsContainer {
 	height: auto;
 	width: 100%;
@@ -21,7 +20,6 @@
 	align-items: center;
 	justify-content: flex-start;
 	background: white;
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
 
 	.works {
 		width: 60%;
@@ -31,7 +29,6 @@
 		height: auto;
 		justify-content: center;
 		margin-top: 50px;
-
 	}
 
 	.textPortfolio {
@@ -93,7 +90,6 @@
 	&:hover {
 		transform: translateY(-3px);
 		box-shadow: 0px 4px 24px -1px rgb(66, 66, 66);
-
 	}
 }
 
@@ -140,12 +136,33 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: .5s;
+	transition: 0.5s;
 	cursor: pointer;
 
 	&:hover {
-		transition: .5s;
+		transition: 0.5s;
 		background: grey;
 		color: rgb(190, 190, 190) !important;
+	}
+}
+
+.carouselContainer {
+	width: 100%;
+	height: 300px;
+}
+
+.carouselElement {
+	width: 300px;
+	margin: 50px !important;
+
+
+	.carouselImg {
+		border-radius: 10px;
+		height: 100%;
+		width: 100%;
+
+		&:hover {
+			filter: blur(.5px);
+		}
 	}
 }
