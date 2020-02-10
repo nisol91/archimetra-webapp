@@ -66,12 +66,12 @@ class PortfolioSp extends Component {
       hideNavbar: true,
 
       navItems: [
-        { id: 1, name: "HOME", ref: "home", offset: -80 },
+        { id: 1, name: "HOME", ref: "home", offset: 0 },
         { id: 2, name: "LO STUDIO", ref: "about", offset: -80 },
         { id: 3, name: "PORTFOLIO", ref: "projects", offset: -80 },
         { id: 4, name: "PARTNERS", ref: "partners", offset: -80 },
         { id: 5, name: "IL TEAM", ref: "skills", offset: -80 },
-        { id: 6, name: "CONTATTACI", ref: "contacts", offset: -80 }
+        { id: 6, name: "CONTATTACI", ref: "contacts", offset: 10 }
       ]
     };
   }
@@ -93,8 +93,8 @@ class PortfolioSp extends Component {
 
   scrollTo(element, offset) {
     scroller.scrollTo(element, {
-      duration: 400,
-      delay: 0,
+      duration: 800,
+      delay: 10,
       smooth: "easeInOutQuart",
       offset: offset
     });
