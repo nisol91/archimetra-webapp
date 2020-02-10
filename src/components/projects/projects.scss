@@ -3,166 +3,170 @@
 //portfolio==========================
 
 .cardsContainer {
-	height: auto;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .boxPortfolio {
-	width: 100%;
-	height: 100vh;
-	padding: 120px 110px;
-	padding-bottom: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
-	background: white;
+  width: 100%;
+  height: 1200px;
+  padding: 120px 110px;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: white;
 
-	.works {
-		width: 60%;
-		display: flex;
-		flex-wrap: wrap;
-		overflow: hidden;
-		height: auto;
-		justify-content: center;
-		margin-top: 50px;
-	}
+  .works {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: auto;
+    justify-content: center;
+    margin-top: 50px;
+  }
 
-	.textPortfolio {
-		width: 100%;
-		margin-bottom: 50px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
+  .textPortfolio {
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-		.port1 {
-			font-size: 70px;
-			font-weight: bold;
-		}
+    .port1 {
+      font-size: 70px;
+      font-weight: bold;
+    }
 
-		.port2 {
-			font-size: 50px;
-			font-weight: bold;
-			margin-top: 50px;
-		}
+    .port2 {
+      font-size: 50px;
+      font-weight: bold;
+      margin-top: 50px;
+    }
 
-		.port3 {
-			font-size: 25px;
-			font-weight: bold;
-			margin-top: 50px;
-		}
+    .port3 {
+      font-size: 25px;
+      font-weight: bold;
+      margin-top: 50px;
+    }
 
-		.port4 {
-			font-size: 20px;
-			font-weight: bold;
-			margin-top: 50px;
-		}
-	}
+    .port4 {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 50px;
+    }
+  }
 }
 
 .logportBox {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .logosPortfolio {
-	width: 80px;
-	margin: 10px;
-	max-height: 70%;
-	max-width: 50%;
+  width: 80px;
+  margin: 10px;
+  max-height: 70%;
+  max-width: 50%;
 }
 
 .card_projects {
-	margin: 10px;
-	width: 100px;
-	height: 80px;
-	background: white;
-	border-radius: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  margin: 10px;
+  width: 100px;
+  height: 80px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-	&:hover {
-		transform: translateY(-3px);
-		box-shadow: 0px 4px 24px -1px rgb(66, 66, 66);
-	}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 24px -1px rgb(66, 66, 66);
+  }
 }
 
 .linkHover {
-	&:hover {
-		display: inline-block;
-		transform: translateY(-2px);
-		margin: 0 5px;
-	}
+  &:hover {
+    display: inline-block;
+    transform: translateY(-2px);
+    margin: 0 5px;
+  }
 }
 
 .progress {
-	width: 60% !important;
-	margin: auto;
-	margin-top: 20%;
-	height: 5px !important;
-	background: $nav-background-color !important;
+  width: 60% !important;
+  margin: auto;
+  margin-top: 20%;
+  height: 5px !important;
+  background: $nav-background-color !important;
 }
 
 .progress-bar {
-	background-color: $link-color !important;
+  background-color: $link-color !important;
 }
 
 .cardCont {
-	overflow: hidden;
-	border-radius: 10px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .dottedDiv {
-	width: 60vw;
-	height: 20px;
-	border-bottom: 1px dotted grey;
+  width: 60vw;
+  height: 20px;
+  border-bottom: 1px dotted grey;
 }
 
 .goToProjects {
-	width: 300px;
-	height: auto;
-	padding: 20px;
-	margin: 20px;
-	color: rgb(63, 63, 63) !important;
-	border: 1px solid rgb(190, 190, 190);
-	border-radius: 50px;
-	font-size: 15px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: 0.5s;
-	cursor: pointer;
+  width: 300px;
+  height: auto;
+  padding: 20px;
+  margin: 20px;
+  color: rgb(63, 63, 63) !important;
+  border: 1px solid rgb(190, 190, 190);
+  border-radius: 50px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
 
-	&:hover {
-		transition: 0.5s;
-		background: grey;
-		color: rgb(190, 190, 190) !important;
-	}
+  &:hover {
+    transition: 0.5s;
+    background: grey;
+    color: rgb(190, 190, 190) !important;
+  }
 }
 
 .carouselContainer {
-	width: 100%;
-	height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carouselElement {
-	width: 300px;
-	margin: 50px !important;
+  width: 350px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  .carouselImg {
+    width: 200%;
+    height: auto;
 
-	.carouselImg {
-		border-radius: 10px;
-		height: 100%;
-		width: 100%;
-
-		&:hover {
-			filter: blur(.5px);
-		}
-	}
+    &:hover {
+      filter: blur(0.5px);
+    }
+  }
 }

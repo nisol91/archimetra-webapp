@@ -3,8 +3,7 @@ import Card from "../card/card";
 import "./projects.scss";
 import { translate } from "react-i18next";
 import { db } from "../portfolio_single_page/portfolio_sp";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Carousel from "nuka-carousel";
 import { isMobile } from "react-device-detect";
 
 class Projects extends Component {
@@ -56,7 +55,7 @@ class Projects extends Component {
     const responsive = {
       desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 4,
+        items: 2,
         partialVisibilityGutter: 40
       },
       tablet: {
@@ -92,23 +91,10 @@ class Projects extends Component {
           >
             <div className="carouselContainer">
               <Carousel
-                swipeable={true}
-                draggable={true}
-                showDots={true}
-                responsive={responsive}
-                ssr={true} // means to render carousel on server-side.
-                infinite={true}
-                autoPlay={this.state.deviceType === "mobile" ? false : true}
-                autoPlaySpeed={3000}
-                keyBoardControl={true}
-                customTransition="all .5s"
-                transitionDuration={500}
-                containerClass="carousel-container"
-                removeArrowOnDeviceType={["tablet", "mobile"]}
-                deviceType={this.state.deviceType}
-                dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding-40-px"
-                focusOnSelect={false}
+                slidesToShow="3"
+                dragging="true"
+                swiping="true"
+                wrapAround="true"
               >
                 {this.state.firebaseProjects.map((project, index) => (
                   <React.Fragment key={index}>
