@@ -4,12 +4,7 @@ import "./footer.scss";
 import { translate } from "react-i18next";
 import firebaseLogo from "../../img/firebase_logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faGithub,
-  faLinkedinIn,
-  faReact
-} from "@fortawesome/free-brands-svg-icons";
+import { faReact, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 class Footer extends Component {
   constructor(props) {
     super(props);
@@ -66,26 +61,8 @@ class Footer extends Component {
     return (
       <div className="footer">
         <div className="iconsContainer">
-          <a
-            href="https://www.instagram.com/0nic1/?hl=it"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faInstagram} className="socialIcon" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/nicola-solzi-07767614a/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faLinkedinIn} className="socialIcon" />
-          </a>
-          <a
-            href="https://github.com/nisol91?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faGithub} className="socialIcon" />
+          <a href="/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faFacebookF} className="socialIcon" />
           </a>
         </div>
         <div className="iconsContainer">

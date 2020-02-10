@@ -3,6 +3,7 @@
 .boxAbout {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	height: 100vh;
 	margin-top: 100px;
 
@@ -12,22 +13,77 @@
 		margin-left: 6%;
 		margin-top: 10px;
 		margin-right: 7%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 
 		.about1 {
-			font-size: 70px;
+			font-size: 50px;
 			font-weight: bold;
 		}
 
 		.about2 {
-			font-size: 50px;
-			font-weight: bold;
+			font-size: 23px;
 			margin-top: 50px;
+			text-align: center;
 		}
 
 		.about3 {
-			font-size: 30px;
-			font-weight: bold;
+			font-size: 20px;
 			margin-top: 50px;
+			text-align: center;
+			font-weight: bold;
+
+		}
+
+		.about4 {
+			font-size: 13px;
+			text-align: center;
+			color: rgb(172, 172, 172);
+		}
+	}
+}
+
+.dottedDiv {
+	width: 60vw;
+	height: 20px;
+	border-bottom: 1px dotted grey;
+}
+
+.threePresentationDiv {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+
+	.presentationDiv {
+		width: 50%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		margin: 50px 10px;
+		padding-top: 50px;
+		transition: .4s;
+
+		&:hover {
+			transition: .4s;
+			transform: translateY(-10px);
+		}
+
+		.iconContainer {
+			width: 100px;
+			height: 100px;
+			background: rgb(172, 172, 172);
+			border-radius: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.aboutIcon {
+				font-size: 30px;
+			}
 		}
 	}
 }

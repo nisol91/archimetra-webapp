@@ -7,7 +7,7 @@
 .footer {
 	width: 100%;
 	height: 200px;
-	background: $nav-background-color;
+	background: white;
 	margin-bottom: 0;
 	display: flex;
 	justify-content: center;
@@ -31,7 +31,8 @@
 .socialIcon {
 	font-size: 20px;
 	margin: 20px;
-	color: $link-color;
+	color: rgb(40, 38, 43);
+
 
 	&:hover {
 		color: $link-hover-color;
@@ -53,9 +54,12 @@
 .nsLink {
 	padding-top: 10px;
 	padding-left: 15px;
+	color: rgb(40, 38, 43) !important;
 
 	&:hover {
 		transform: translateY(-5px);
+		color: rgb(40, 38, 43) !important;
+
 	}
 
 }
