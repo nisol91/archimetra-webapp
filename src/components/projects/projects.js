@@ -14,8 +14,7 @@ class Projects extends Component {
 
     this.state = {
       firebaseProjects: [],
-      projectsVisibility: true,
-      contentDidMount: false,
+      projectsVisibility: false,
       deviceType: "",
       height: window.innerHeight,
       width: window.innerWidth
@@ -31,7 +30,8 @@ class Projects extends Component {
         console.log("=====PROJECTS====");
         console.log(data);
         console.log("=====PROJECTS====");
-        this.setState({ firebaseProjects: data, projectsVisibility: true });
+        this.setState({ firebaseProjects: data });
+        this.showProjects();
       });
   }
 
@@ -57,6 +57,14 @@ class Projects extends Component {
     console.log(this.state.width);
   }
 
+  showProjects() {
+    setTimeout(() => {
+      this.setState({
+        projectsVisibility: true
+      });
+    }, 1000);
+  }
+
   componentDidMount() {
     this.fetchProjects();
     this.isMobile();
@@ -65,19 +73,11 @@ class Projects extends Component {
   render() {
     const { t } = this.props;
 
-    var settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
-
     return (
       <div className={`fade-in ${this.state.projectsVisibility && "visible"}`}>
         <div
-          className={`boxPortfolio fade-in ${this.state.projectsVisibility &&
-            "visible"}`}
+          className={`boxPortfolio  ${this.state.projectsVisibility &&
+            "visible fade-in"}`}
         >
           <div
             className={`textPortfolio ${this.state.projectsVisibility &&
