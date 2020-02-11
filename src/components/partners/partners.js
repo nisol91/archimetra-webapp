@@ -59,7 +59,7 @@ class Partners extends Component {
       this.setState({
         partnersVisibility: true
       });
-    }, 1000);
+    }, 300);
   }
 
   componentDidMount() {

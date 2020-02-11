@@ -216,17 +216,21 @@
 	z-index: 9998;
 }
 
+.placeholder {
+	width: 100%;
+	height: 100vh;
+	background: white;
+	margin-bottom: 30vh;
+}
+
 .aboutPlaceholder {
 	width: 100%;
 	height: 100vh;
+	background: white;
+	margin-bottom: 5vh;
 }
 
-.contactsPlaceholder {
-	width: 100%;
-	background:
-		$card-link-color;
-	height: 50vh;
-}
+
 
 .lineThroughNav {
 	position: relative;

@@ -1,13 +1,13 @@
 @import "./src/scss/variables";
 
-.boxAbout {
+.boxTeam {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
 	margin-top: 100px;
 
-	.aboutcontainer {
+	.teamcontainer {
 		height: 100vh;
 		padding: 30px;
 		margin-left: 6%;
@@ -18,18 +18,18 @@
 		align-items: center;
 		flex-direction: column;
 
-		.about1 {
+		.team1 {
 			font-size: 50px;
 			font-weight: bold;
 		}
 
-		.about2 {
+		.team2 {
 			font-size: 23px;
 			margin-top: 50px;
 			text-align: center;
 		}
 
-		.about3 {
+		.team3 {
 			font-size: 20px;
 			margin-top: 50px;
 			text-align: center;
@@ -37,7 +37,7 @@
 
 		}
 
-		.about4 {
+		.team4 {
 			font-size: 13px;
 			text-align: center;
 			color: rgb(172, 172, 172);
@@ -67,28 +67,6 @@
 		padding-top: 50px;
 		transition: .4s;
 
-		&:hover {
-			transition: .4s;
-			transform: translateY(-10px);
-		}
 
-		.iconContainer {
-			width: 100px;
-			height: 100px;
-			background: rgb(172, 172, 172);
-			border-radius: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			.aboutIcon {
-				font-size: 30px;
-			}
-		}
 	}
-}
-
-.triangle {
-	width: 100%;
-	height: auto;
 }

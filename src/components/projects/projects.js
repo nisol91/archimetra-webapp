@@ -46,7 +46,7 @@ class Projects extends Component {
       console.log(this.state.deviceType);
       console.log(isMobile);
       console.log("====================================");
-    }, 1500);
+    }, 200);
   }
 
   updateDimensions() {
@@ -62,7 +62,7 @@ class Projects extends Component {
       this.setState({
         projectsVisibility: true
       });
-    }, 1000);
+    }, 200);
   }
 
   componentDidMount() {
@@ -74,55 +74,53 @@ class Projects extends Component {
     const { t } = this.props;
 
     return (
-      <div className={`fade-in ${this.state.projectsVisibility && "visible"}`}>
+      <div
+        className={`boxPortfolio fade-in ${this.state.projectsVisibility &&
+          "visible "}`}
+      >
         <div
-          className={`boxPortfolio  ${this.state.projectsVisibility &&
-            "visible fade-in"}`}
+          className={`textPortfolio ${this.state.projectsVisibility &&
+            "visible slide-in-tr"}`}
         >
-          <div
-            className={`textPortfolio ${this.state.projectsVisibility &&
-              "visible slide-in-tr"}`}
-          >
-            <h1 className="port1">PORTFOLIO</h1>
-            <div className="dottedDiv"></div>
+          <h1 className="port1">PORTFOLIO</h1>
+          <div className="dottedDiv"></div>
 
-            <a className="goToProjects">VAI AL PORTFOLIO</a>
-          </div>
-          <div
-            className={`works fade-in ${this.state.projectsVisibility &&
-              "visible"}`}
-          >
-            <div className="carouselContainer">
-              <Carousel
-                slidesToShow={
-                  this.state.width > 1100
-                    ? this.state.width > 1500
-                      ? "4"
-                      : "3"
-                    : this.state.width > 900
-                    ? "2"
-                    : "1"
-                }
-                dragging="true"
-                swiping="true"
-                wrapAround="true"
-                autoplay="true"
-                autoplayInterval="2000"
-              >
-                {this.state.firebaseProjects.map((project, index) => (
-                  <React.Fragment key={index}>
-                    <div key={index} className="carouselElement">
-                      <a className="hoverDiv" href="/">
-                        <h1 className="projectTitle">{project.name}</h1>
-                        <div className="divisorio"></div>
-                        <h1 className="projectDesc">{project.description}</h1>
-                      </a>
-                      <img className="carouselImg" src={project.img} alt="" />
-                    </div>
-                  </React.Fragment>
-                ))}
-              </Carousel>
-            </div>
+          <a className="goToProjects">VAI AL PORTFOLIO</a>
+        </div>
+        <div
+          className={`works fade-in ${this.state.projectsVisibility &&
+            "visible"}`}
+        >
+          <div className="carouselContainer">
+            <Carousel
+              slidesToShow={
+                this.state.width > 1100
+                  ? this.state.width > 1500
+                    ? "4"
+                    : "3"
+                  : this.state.width > 900
+                  ? "2"
+                  : "1"
+              }
+              dragging="true"
+              swiping="true"
+              wrapAround="true"
+              autoplay="true"
+              autoplayInterval="2000"
+            >
+              {this.state.firebaseProjects.map((project, index) => (
+                <React.Fragment key={index}>
+                  <div key={index} className="carouselElement">
+                    <a className="hoverDiv" href="/">
+                      <h1 className="projectTitle">{project.name}</h1>
+                      <div className="divisorio"></div>
+                      <h1 className="projectDesc">{project.description}</h1>
+                    </a>
+                    <img className="carouselImg" src={project.img} alt="" />
+                  </div>
+                </React.Fragment>
+              ))}
+            </Carousel>
           </div>
         </div>
       </div>

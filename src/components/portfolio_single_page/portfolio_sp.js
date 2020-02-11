@@ -54,7 +54,8 @@ class PortfolioSp extends Component {
       homeNavVisible: false,
       contactsNavVisible: false,
       partnersNavVisible: false,
-
+      //questi servono per mostrare le varie sezioni solo se ci si va sopra con il viewport,
+      //cosi le animazioni in ingresso si attivano solo se entrano nel viewport
       teamVisible: false,
       projectsVisible: false,
       aboutVisible: false,
@@ -388,8 +389,10 @@ class PortfolioSp extends Component {
               onEnter={this.onEnterViewportProjects}
               onExit={this.onExitViewportProjects}
             ></ScrollTrigger>
-            <Element name="projects">
-              <Projects id="projects"></Projects>
+            <Element name="projects" className="placeholder">
+              {this.state.projectsVisible ? (
+                <Projects id="projects"></Projects>
+              ) : null}
             </Element>
           </div>
         ) : null}
@@ -399,8 +402,10 @@ class PortfolioSp extends Component {
             onEnter={this.onEnterViewportPartners}
             onExit={this.onExitViewportPartners}
           ></ScrollTrigger>
-          <Element name="partners">
-            <Partners id="partners"></Partners>
+          <Element name="partners" className="placeholder">
+            {this.state.partnersVisible ? (
+              <Partners id="partners"></Partners>
+            ) : null}
           </Element>
         </div>
         <div>
@@ -409,8 +414,8 @@ class PortfolioSp extends Component {
             onEnter={this.onEnterViewportTeam}
             onExit={this.onExitViewportTeam}
           ></ScrollTrigger>
-          <Element name="team">
-            <Team id="team"></Team>
+          <Element name="team" className="placeholder">
+            {this.state.teamVisible ? <Team id="team"></Team> : null}
           </Element>
         </div>
 
@@ -421,7 +426,7 @@ class PortfolioSp extends Component {
               onEnter={this.onEnterViewportContacts}
               onExit={this.onExitViewportContacts}
             ></ScrollTrigger>
-            <Element name="contacts" className="contactsPlaceholder">
+            <Element name="contacts" className="placeholder">
               {this.state.contactsVisible ? (
                 <Contact id="contact"></Contact>
               ) : null}
