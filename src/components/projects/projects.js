@@ -4,17 +4,21 @@ import "./projects.scss";
 import { translate } from "react-i18next";
 import { db } from "../portfolio_single_page/portfolio_sp";
 import Carousel from "nuka-carousel";
+
 import { isMobile } from "react-device-detect";
 
 class Projects extends Component {
   constructor(props) {
     super(props);
+    this.updateDimensions = this.updateDimensions.bind(this);
 
     this.state = {
       firebaseProjects: [],
       projectsVisibility: true,
       contentDidMount: false,
-      deviceType: ""
+      deviceType: "",
+      height: window.innerHeight,
+      width: window.innerWidth
     };
   }
 
@@ -45,29 +49,28 @@ class Projects extends Component {
     }, 1500);
   }
 
+  updateDimensions() {
+    this.setState({
+      height: window.innerHeight,
+      width: window.innerWidth
+    });
+    console.log(this.state.width);
+  }
+
   componentDidMount() {
     this.fetchProjects();
     this.isMobile();
+    window.addEventListener("resize", this.updateDimensions);
   }
   render() {
     const { t } = this.props;
 
-    const responsive = {
-      desktop: {
-        breakpoint: { max: 3000, min: 1024 },
-        items: 2,
-        partialVisibilityGutter: 40
-      },
-      tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 2,
-        partialVisibilityGutter: 40
-      },
-      mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1,
-        partialVisibilityGutter: 40
-      }
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
     };
 
     return (
@@ -91,15 +94,29 @@ class Projects extends Component {
           >
             <div className="carouselContainer">
               <Carousel
-                slidesToShow="3"
+                slidesToShow={
+                  this.state.width > 1100
+                    ? this.state.width > 1500
+                      ? "4"
+                      : "3"
+                    : this.state.width > 900
+                    ? "2"
+                    : "1"
+                }
                 dragging="true"
                 swiping="true"
                 wrapAround="true"
+                autoplay="true"
+                autoplayInterval="2000"
               >
                 {this.state.firebaseProjects.map((project, index) => (
                   <React.Fragment key={index}>
                     <div key={index} className="carouselElement">
-                      {/* <h1>{project.name}</h1> */}
+                      <a className="hoverDiv" href="/">
+                        <h1 className="projectTitle">{project.name}</h1>
+                        <div className="divisorio"></div>
+                        <h1 className="projectDesc">{project.description}</h1>
+                      </a>
                       <img className="carouselImg" src={project.img} alt="" />
                     </div>
                   </React.Fragment>
