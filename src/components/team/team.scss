@@ -58,7 +58,7 @@
 	justify-content: center;
 
 	.presentationDiv {
-		width: 50%;
+		width: 20vw;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
@@ -67,6 +67,9 @@
 		padding-top: 50px;
 		transition: .4s;
 
+		.memberImg {
+			max-width: 100%;
+		}
 
 	}
 }

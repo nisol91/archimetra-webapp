@@ -51,6 +51,14 @@ a {
   }
 }
 
+//correction for nuka-carousel
+.slider-slide:focus,
+.slider-control-centerleft button:focus,
+.slider-control-centerright button:focus,
+.paging-item button:focus {
+  outline: none !important;
+}
+
 
 
 //===========THREE JS=====

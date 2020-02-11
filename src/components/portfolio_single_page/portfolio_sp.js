@@ -426,7 +426,7 @@ class PortfolioSp extends Component {
               onEnter={this.onEnterViewportContacts}
               onExit={this.onExitViewportContacts}
             ></ScrollTrigger>
-            <Element name="contacts" className="placeholder">
+            <Element name="contacts" className="contactPlaceholder">
               {this.state.contactsVisible ? (
                 <Contact id="contact"></Contact>
               ) : null}
