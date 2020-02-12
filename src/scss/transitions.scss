@@ -21,7 +21,7 @@
 }
 
 .fade-in.visible {
-  transition: opacity 1s ease-in;
+  transition: opacity .3s ease-in;
   opacity: 1;
 }
 
@@ -181,9 +181,9 @@
  */
 
 .slide-in-tr {
-  -webkit-animation: slide-in-tr 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: slide-in-tr 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation-delay: 0.5s;
+  -webkit-animation: slide-in-tr 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-tr 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation-delay: 0.3s;
 
 }
 
@@ -232,9 +232,9 @@
 
 
 .tracking-in-expand {
-  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-  animation-delay: 1s;
+  -webkit-animation: tracking-in-expand 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation: tracking-in-expand 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  animation-delay: 0.3s;
 
 }
 

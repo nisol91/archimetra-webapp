@@ -62,7 +62,7 @@ class Projects extends Component {
       this.setState({
         projectsVisibility: true
       });
-    }, 200);
+    }, 100);
   }
 
   componentDidMount() {

@@ -87,7 +87,7 @@ class Contact extends Component {
           <div className="contactMap tracking-in-expand">
             <div
               ref={el => (this.mapContainer = el)}
-              className="mapContainer"
+              className="mapContainer tracking-in-expand"
             ></div>
           </div>
         </div>
