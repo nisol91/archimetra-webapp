@@ -341,7 +341,7 @@ class PortfolioSp extends Component {
             />
             <img
               className="homeImg"
-              src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/proj1.jpg?alt=media&token=1c349bd4-5350-46fb-88e2-d3b07e280ac3"
+              src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/proj9.jpg?alt=media&token=19997803-838b-4e93-be6d-24237465a0ad"
               alt=""
             />
           </div>

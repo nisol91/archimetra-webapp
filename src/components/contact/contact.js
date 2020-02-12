@@ -20,9 +20,9 @@ class Contact extends Component {
       visible: false,
       formShowEnter: true,
       mapVisibility: true,
-      lng: 11,
-      lat: 45,
-      zoom: 10
+      lng: 10.209674,
+      lat: 44.826727,
+      zoom: 15
     };
   }
 
@@ -36,6 +36,31 @@ class Contact extends Component {
       center: [this.state.lng, this.state.lat],
       zoom: this.state.zoom
     });
+    var geojson = {
+      type: "FeatureCollection",
+      features: [
+        {
+          type: "Feature",
+          geometry: {
+            type: "Point",
+            coordinates: [10.209674, 44.826727]
+          },
+          properties: {
+            title: "Mapbox",
+            description: "Washington, D.C."
+          }
+        }
+      ]
+    };
+    // add markers to map
+    geojson.features.forEach(function(marker) {
+      // create a HTML element for each feature
+      var el = document.createElement("div");
+      el.className = "marker";
+
+      // make a marker for each feature and add to the map
+      new mapboxgl.Marker(el).setLngLat(marker.geometry.coordinates).addTo(map);
+    });
   }
   render() {
     const { t } = this.props;
@@ -44,20 +69,20 @@ class Contact extends Component {
 
     return (
       <div className="contact">
-        <h1 className="contactTitle tracking-in-expand">CONTATTACI</h1>
         <div className="linearDivContacts tracking-in-expand"></div>
+        <h1 className="contactTitle tracking-in-expand">CONTATTACI</h1>
         <div className="contactBody">
           <div className="contactSx tracking-in-expand">
+            <h1 className="contactSubTitle">STUDIO ARCHIMETRA</h1>
+            <div className="linearDivContactsII"></div>
+            <h1 className="contactText">via Gramsci 16, Ponte Taro, PR</h1>
+            <h1 className="contactText">Email: tecnico@archimetrastudio.it</h1>
+            <h1 className="contactText">Phone: 0521 618082</h1>
             <img
               className="contactImg"
               src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/contactsimg.jpg?alt=media&token=e1bbe7e8-200a-49bf-a0b0-21cf91363147"
               alt=""
             />
-            <h1 className="contactSubTitle">STUDIO ARCHIMETRA</h1>
-            <div className="linearDivContacts"></div>
-            <h1 className="contactText">via Gramsci 16, Ponte Taro, PR</h1>
-            <h1 className="contactText">Email: tecnico@archimetrastudio.it</h1>
-            <h1 className="contactText">Phone: 0521 618082</h1>
           </div>
           <div className="contactMap tracking-in-expand">
             <div

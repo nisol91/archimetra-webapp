@@ -61,7 +61,11 @@ class Footer extends Component {
     return (
       <div className="footer">
         <div className="iconsContainer">
-          <a href="/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://it-it.facebook.com/Archimetra/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faFacebookF} className="socialIcon" />
           </a>
         </div>

@@ -13,16 +13,27 @@ class Team extends Component {
     };
   }
 
-  async fetchTeam() {
-    await db
-      .collection("team")
-      .get()
-      .then(querySnapshot => {
-        const data = querySnapshot.docs.map(doc => doc.data());
-        console.log(data);
-        this.setState({ team: data });
-        this.showTeam();
-      });
+  //get data only once the function is called
+  // async fetchTeam() {
+  //   await db
+  //     .collection("team")
+  //     .get()
+  //     .then(querySnapshot => {
+  //       const data = querySnapshot.docs.map(doc => doc.data());
+  //       console.log(data);
+  //       this.setState({ team: data });
+  //       this.showTeam();
+  //     });
+  // }
+
+  //fetch real time with listen to db changes
+  async fetchTeamRealTime() {
+    await db.collection("team").onSnapshot(querySnapshot => {
+      const data = querySnapshot.docs.map(doc => doc.data());
+      console.log(data);
+      this.setState({ team: data });
+      this.showTeam();
+    });
   }
 
   showTeam() {
@@ -34,7 +45,8 @@ class Team extends Component {
   }
 
   componentDidMount() {
-    this.fetchTeam();
+    // this.fetchTeam();
+    this.fetchTeamRealTime();
   }
   render() {
     const { t } = this.props;

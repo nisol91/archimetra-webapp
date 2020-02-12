@@ -116,7 +116,7 @@ class Projects extends Component {
                       <div className="divisorio"></div>
                       <h1 className="projectDesc">{project.description}</h1>
                     </a>
-                    <img className="carouselImg" src={project.img} alt="" />
+                    <img className="carouselImg" src={project.img[0]} alt="" />
                   </div>
                 </React.Fragment>
               ))}
