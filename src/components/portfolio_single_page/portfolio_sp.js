@@ -414,7 +414,7 @@ class PortfolioSp extends Component {
             onEnter={this.onEnterViewportTeam}
             onExit={this.onExitViewportTeam}
           ></ScrollTrigger>
-          <Element name="team" className="placeholder">
+          <Element name="team" className="teamPlaceholder">
             {this.state.teamVisible ? <Team id="team"></Team> : null}
           </Element>
         </div>

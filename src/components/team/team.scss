@@ -4,11 +4,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
+	height: auto;
 	margin-top: 100px;
 
 	.teamcontainer {
-		height: 100vh;
+		height: auto;
 		padding: 30px;
 		margin-left: 6%;
 		margin-top: 10px;
@@ -66,7 +66,7 @@
 
 	.presentationDiv {
 		width: 20vw;
-		height: 400px;
+		height: auto;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
@@ -80,7 +80,7 @@
 		.memberTitle {
 			font-size: 25px;
 			transition: .5s;
-			color: rgb(240, 240, 240);
+			color: rgb(112, 112, 112);
 			font-weight: bold;
 			z-index: 9999;
 
@@ -145,19 +145,26 @@
 
 			.memberStory {
 				transition: .5s;
-				top: 300px;
+				top: 320px;
+			}
+
+			.memberTitle {
+				transition: .5s;
+
+				color: rgb(240, 240, 240)
 			}
 
 			.memberTitle,
 			.memberDesc {
 				transition: .5s;
 				transform: translateY(-180px);
+				pointer-events: none;
 			}
 
 			.divisorio {
 				transition: .5s;
+				transform: translateY(-120px);
 
-				opacity: 0;
 
 			}
 		}
