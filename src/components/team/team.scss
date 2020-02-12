@@ -68,7 +68,7 @@
 		width: 20vw;
 		height: auto;
 		display: flex;
-		justify-content: flex-start;
+		justify-content: space-between;
 		align-items: center;
 		flex-direction: column;
 		margin: 50px 20px;
@@ -78,7 +78,7 @@
 
 
 		.memberTitle {
-			font-size: 25px;
+			font-size: 20px;
 			transition: .5s;
 			color: rgb(112, 112, 112);
 			font-weight: bold;
