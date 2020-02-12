@@ -45,10 +45,17 @@
 	}
 }
 
+.divisorio {
+	width: 80%;
+	height: 5px;
+	border-bottom: 1px solid rgb(167, 167, 167);
+	margin-bottom: 10px;
+}
+
 .linearDiv {
-	width: 30vw;
-	height: 20px;
-	border-bottom: 1px solid grey;
+	width: 50vw;
+	height: 5px;
+	border-bottom: 1px solid rgb(167, 167, 167);
 }
 
 .fourPresentationDiv {
@@ -59,16 +66,100 @@
 
 	.presentationDiv {
 		width: 20vw;
+		height: 400px;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
 		flex-direction: column;
-		margin: 50px 10px;
+		margin: 50px 20px;
 		padding-top: 50px;
-		transition: .4s;
+		overflow: hidden;
+		position: relative;
 
-		.memberImg {
-			max-width: 100%;
+
+		.memberTitle {
+			font-size: 25px;
+			transition: .5s;
+			color: rgb(240, 240, 240);
+			font-weight: bold;
+			z-index: 9999;
+
+		}
+
+		.memberDesc {
+			font-size: 17px;
+			font-style: italic;
+			color: rgb(167, 167, 167);
+			transition: .5s;
+			z-index: 9999;
+
+
+		}
+
+		.memberStory {
+			position: absolute;
+			top: 1000px;
+			font-size: 14px;
+			padding: 15px;
+			text-align: center;
+			line-height: 22px;
+			transition: .5s;
+
+		}
+
+
+
+		.imgBox {
+			width: 100%;
+			position: relative;
+			margin-bottom: 30px;
+
+			.memberImg {
+				max-width: 100%;
+			}
+
+			.hoverDiv {
+				width: 100%;
+				height: 100%;
+				background: rgba(71, 71, 71, 0.719);
+				opacity: 0;
+				position: absolute;
+				top: 0;
+
+			}
+
+			&:hover {
+				.hoverDiv {
+					opacity: 1;
+					transition: .5s;
+
+				}
+			}
+		}
+
+		&:hover {
+
+			overflow: visible;
+
+
+
+			.memberStory {
+				transition: .5s;
+				top: 300px;
+			}
+
+			.memberTitle,
+			.memberDesc {
+				transition: .5s;
+				transform: translateY(-180px);
+			}
+
+			.divisorio {
+				transition: .5s;
+
+				opacity: 0;
+
+			}
 		}
 
 	}

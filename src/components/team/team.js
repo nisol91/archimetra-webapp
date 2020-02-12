@@ -50,10 +50,14 @@ class Team extends Component {
             {this.state.team.map((member, index) => (
               <React.Fragment key={index}>
                 <div key={index} className="presentationDiv">
+                  <div className="imgBox">
+                    <div className="hoverDiv"></div>
+                    <img className="memberImg" src={member.img} alt="" />
+                  </div>
                   <h1 className="memberTitle">{member.name}</h1>
                   <div className="divisorio"></div>
                   <h1 className="memberDesc">{member.description}</h1>
-                  <img className="memberImg" src={member.img} alt="" />
+                  <h1 className="memberStory">{member.story}</h1>
                 </div>
               </React.Fragment>
             ))}
