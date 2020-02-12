@@ -137,6 +137,16 @@
 @media (max-width: 1200px) and (min-width: 768px) {}
 
 //================
+// Medium-Large devices (large desktops, 1200px and down)
+//================
+
+@media (max-width: 1050px) {
+	.separatorNavItem {
+		display: none;
+	}
+}
+
+//================
 // Medium devices (desktops, 992px and down)
 //================
 
@@ -306,11 +316,22 @@
 	}
 
 	.navbar {
-		height: 250px !important;
+		height: auto !important;
 		flex-direction: column;
 		padding: 20px !important;
 		background: $nav-background-color-nav !important;
 		z-index: 9990 !important;
+		justify-content: flex-start;
+	}
+
+	.bottomNavbar {
+		width: 100%;
+		padding: 0 15%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 400px !important;
 	}
 
 	.showNavBtn {
@@ -325,10 +346,7 @@
 		display: none !important;
 	}
 
-	.boxHome,
-	.boxSkills {
-		padding: 40px !important;
-	}
+
 
 
 
