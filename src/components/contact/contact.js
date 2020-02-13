@@ -64,8 +64,6 @@ class Contact extends Component {
   }
   render() {
     const { t } = this.props;
-    mapboxgl.accessToken =
-      "pk.eyJ1Ijoibmlzb2w5MSIsImEiOiJjazBjaWRvbTIwMWpmM2hvMDhlYWhhZGV0In0.wyRaVw6FXdw6g3wp3t9FNQ";
 
     return (
       <div className="contact">
