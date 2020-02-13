@@ -12,7 +12,21 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      splashScreen: true,
+      hideSplash: false
+    };
+  }
+  componentDidMount() {
+    this.splash();
+  }
+  splash() {
+    setTimeout(() => {
+      this.setState({ splashScreen: false });
+    }, 1500);
+    setTimeout(() => {
+      this.setState({ hideSplash: true });
+    }, 3000);
   }
 
   render() {
@@ -24,6 +38,18 @@ class App extends Component {
         <Router>
           <div className="contenitore">
             <div className="main" onClick={this.hideNav}>
+              {!this.state.hideSplash ? (
+                <div
+                  className={`splashScreen  ${this.state.splashScreen ===
+                    false && "fade-out-splash"}`}
+                >
+                  <img
+                    className="splashImg pulseit"
+                    src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/archimetra_logo.png?alt=media&token=2c8ae350-b677-4aab-a10a-00e98ffa6033"
+                    alt=""
+                  />
+                </div>
+              ) : null}
               <Route exact path="/" component={PortfolioSp} />
               <Route exact path="/project/:projID" component={Project} />
             </div>

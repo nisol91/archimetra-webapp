@@ -281,8 +281,10 @@
 	.presentationDivTeam {
 		width: 40% !important;
 		justify-content: flex-end !important;
+		transition: .5s;
 
 		&:hover {
+			transition: .5s;
 			margin-bottom: 150px !important;
 
 			.memberStory {
@@ -296,7 +298,7 @@
 	}
 
 	.contactSubTitle {
-		font-size: 25px !important;
+		font-size: 22px !important;
 	}
 
 	.contactImg {
