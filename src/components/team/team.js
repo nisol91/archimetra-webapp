@@ -30,7 +30,7 @@ class Team extends Component {
   async fetchTeamRealTime() {
     await db.collection("team").onSnapshot(querySnapshot => {
       const data = querySnapshot.docs.map(doc => doc.data());
-      console.log(data);
+      // console.log(data);
       this.setState({ team: data });
       this.showTeam();
     });
