@@ -27,9 +27,9 @@ class Projects extends Component {
       .get()
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
-        console.log("=====PROJECTS====");
-        console.log(data);
-        console.log("=====PROJECTS====");
+        //console.log("=====PROJECTS====");
+        //console.log(data);
+        //console.log("=====PROJECTS====");
         this.setState({ firebaseProjects: data });
         this.showProjects();
       });
@@ -42,10 +42,10 @@ class Projects extends Component {
       this.setState({ deviceType: "browser" });
     }
     setTimeout(() => {
-      console.log("====================================");
-      console.log(this.state.deviceType);
-      console.log(isMobile);
-      console.log("====================================");
+      //console.log("====================================");
+      //console.log(this.state.deviceType);
+      //console.log(isMobile);
+      //console.log("====================================");
     }, 200);
   }
 
@@ -54,7 +54,7 @@ class Projects extends Component {
       height: window.innerHeight,
       width: window.innerWidth
     });
-    console.log(this.state.width);
+    //console.log(this.state.width);
   }
 
   showProjects() {

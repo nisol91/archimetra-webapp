@@ -26,7 +26,7 @@ class Partners extends Component {
       .get()
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
-        console.log(data);
+        //console.log(data);
         this.setState({ firebasePartners: data });
         this.showProjects();
       });
@@ -39,10 +39,10 @@ class Partners extends Component {
       this.setState({ deviceType: "browser" });
     }
     setTimeout(() => {
-      console.log("====================================");
-      console.log(this.state.deviceType);
-      console.log(isMobile);
-      console.log("====================================");
+      //console.log("====================================");
+      //console.log(this.state.deviceType);
+      //console.log(isMobile);
+      //console.log("====================================");
     }, 1500);
   }
 
@@ -51,7 +51,7 @@ class Partners extends Component {
       height: window.innerHeight,
       width: window.innerWidth
     });
-    console.log(this.state.width);
+    //console.log(this.state.width);
   }
 
   showProjects() {
