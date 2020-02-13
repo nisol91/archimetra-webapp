@@ -114,6 +114,9 @@
 			width: 100%;
 			position: relative;
 			margin-bottom: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 			.memberImg {
 				max-width: 100%;
