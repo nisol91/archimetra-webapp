@@ -561,8 +561,15 @@
 		&:hover {
 			.memberStory {
 				top: 75% !important;
+				left: 50% !important;
+				transform: translateX(-50%);
+				width: 100%;
 			}
 		}
+	}
+
+	.topText {
+		font-size: 10px !important;
 	}
 
 	.aboutPlaceholder {
