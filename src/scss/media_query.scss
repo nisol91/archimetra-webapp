@@ -558,6 +558,11 @@
 @media (max-width: 450px) {
 
 	.presentationDivTeam {
+		.memberStory {
+			left: 50% !important;
+			transform: translateX(-50%);
+		}
+
 		&:hover {
 			.memberStory {
 				top: 75% !important;
@@ -573,7 +578,7 @@
 	}
 
 	.aboutPlaceholder {
-		height: 190vh !important;
+		height: 220vh !important;
 	}
 
 	.teamPlaceholder {
