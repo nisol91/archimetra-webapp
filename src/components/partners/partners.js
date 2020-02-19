@@ -111,7 +111,7 @@ class Partners extends Component {
         <div className="parallaxDiv">
           <Parallax
             className="parallax"
-            bgImage="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/proj5.jpg?alt=media&token=3d0ca23b-f968-46ef-b5d2-d8ba2eeb6168"
+            bgImage="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/nuova%20villa%20INTERNO%201.jpg?alt=media&token=de4731ee-7381-4a01-b024-78c373240d3d"
             strength={500}
           ></Parallax>
         </div>
