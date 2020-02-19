@@ -7,6 +7,7 @@ import Project from "./components/project/project";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
 import { translate } from "react-i18next";
+import { Spinner } from "reactstrap";
 
 class App extends Component {
   constructor(props) {
@@ -23,10 +24,10 @@ class App extends Component {
   splash() {
     setTimeout(() => {
       this.setState({ splashScreen: false });
-    }, 1500);
+    }, 2500);
     setTimeout(() => {
       this.setState({ hideSplash: true });
-    }, 3000);
+    }, 3500);
   }
 
   render() {
@@ -43,11 +44,7 @@ class App extends Component {
                   className={`splashScreen  ${this.state.splashScreen ===
                     false && "fade-out-splash"}`}
                 >
-                  <img
-                    className="splashImg pulseit"
-                    src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/archimetra_logo.png?alt=media&token=2c8ae350-b677-4aab-a10a-00e98ffa6033"
-                    alt=""
-                  />
+                  <Spinner color="primary" className="splashSpinner" />
                 </div>
               ) : null}
               <Route exact path="/" component={PortfolioSp} />
