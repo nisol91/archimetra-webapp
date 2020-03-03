@@ -33,6 +33,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
+
 }
 
 .textHomeBox {
@@ -286,7 +287,9 @@
 	filter: brightness(.7);
 	height: 90%;
 	width: 1100px;
-	-webkit-box-reflect: below 0px gradient(linear, right top, right bottom, from(transparent), color-stop(90%, transparent), to(rgba(255, 255, 255, 0.589)));
+
+	//serve per la reflection in fondo ma rallenta tutto....
+	// -webkit-box-reflect: below 0px -webkit-gradient(linear, right top, right bottom, from(transparent), color-stop(90%, transparent), to(rgba(255, 255, 255, 0.589)));
 }
 
 .imageContainer {
@@ -298,12 +301,26 @@
 	height: 100vh;
 	overflow: hidden;
 
+	.overlayGradient {
+		width: 100vw;
+		height: 100%;
+		background: white;
+		position: absolute;
+		top: 0px;
+		background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.308) 71%, rgba(255, 255, 255, 0.61) 80%, white 90%);
+		z-index: 9995;
+		opacity: 1;
+
+	}
+
+
 	img {
 		position: absolute;
 		animation-name: multiple-image-crossfade;
 		animation-timing-function: ease-in-out;
 		animation-iteration-count: infinite;
 		animation-duration: 32s;
+
 
 		&:nth-of-type(1) {
 			animation-delay: 0;

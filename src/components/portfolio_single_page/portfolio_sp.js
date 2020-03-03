@@ -337,12 +337,11 @@ class PortfolioSp extends Component {
 
         <div className="boxHome">
           <div className="imageContainer">
-            <LazyLoad height={200}>
-              <img className="homeImg" src={header_1} alt="" />
-              <img className="homeImg" src={header_2} alt="" />
-              <img className="homeImg" src={header_3} alt="" />
-              <img className="homeImg" src={header_4} alt="" />
-            </LazyLoad>
+            <div className="overlayGradient"></div>
+            <img className="homeImg" src={header_1} alt="" />
+            <img className="homeImg" src={header_2} alt="" />
+            <img className="homeImg" src={header_3} alt="" />
+            <img className="homeImg" src={header_4} alt="" />
           </div>
 
           <div className="textHomeBox">
