@@ -6,6 +6,7 @@
 //================
 
 @media (min-width: 300px) {
+
   #s,
   #t,
   #c {
@@ -19,6 +20,7 @@
 //================
 
 @media (min-width: 450px) {
+
   #s,
   #t,
   #c {
@@ -32,6 +34,7 @@
 //================
 
 @media (min-width: 576px) {
+
   #s,
   #t,
   #c {
@@ -82,6 +85,7 @@
 //================
 
 @media (min-width: 1300px) {
+
   #s,
   #t,
   #c {
@@ -91,6 +95,7 @@
 }
 
 @media (min-width: 1400px) {
+
   #s,
   #t,
   #c {
@@ -105,8 +110,7 @@
 // Large devices (large desktops, 1200px and down)
 //================
 
-@media (max-width: 1200px) and (min-width: 768px) {
-}
+@media (max-width: 1200px) and (min-width: 768px) {}
 
 //================
 // Medium-Large devices (large desktops, 1200px and down)
@@ -233,6 +237,15 @@
   // 	flex-direction: column;
   // 	align-items: center;
   // }
+
+  .home1,
+  .skills1,
+  .about1,
+  .partn1,
+  .team1,
+  .contactTitle {
+    font-size: 50px !important;
+  }
 
   .boxSkills {
     margin-top: 100px !important;
@@ -442,11 +455,7 @@
     font-size: 17px !important;
   }
 
-  .home1,
-  .skills1,
-  .about1 {
-    font-size: 40px !important;
-  }
+
 
   .home2,
   .skills2,
@@ -457,6 +466,8 @@
 
   .about4 {
     padding: 0 50px !important;
+    font-size: 13px !important;
+
   }
 
   .aboutPlaceholder {
@@ -532,7 +543,13 @@
     height: 400vh !important;
   }
 
-  .home1 {
+
+  .home1,
+  .skills1,
+  .about1,
+  .partn1,
+  .team1,
+  .contactTitle {
     font-size: 40px !important;
   }
 
@@ -561,8 +578,7 @@
     margin: 5px !important;
   }
 
-  .cardCont {
-  }
+  .cardCont {}
 }
 
 //================

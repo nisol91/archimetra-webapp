@@ -324,7 +324,7 @@ class PortfolioSp extends Component {
 
         <div className="boxHome">
           <div className="imageContainer">
-            <img
+            {/* <img
               className="homeImg"
               src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/ristr%20edif%20rural%202.jpg?alt=media&token=b06a1a06-2111-4a63-892b-0d681f947db6"
               alt=""
@@ -343,7 +343,7 @@ class PortfolioSp extends Component {
               className="homeImg"
               src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/ristr%20edif%20rural%204.jpg?alt=media&token=112b7df9-2a82-4ed3-9ffc-a0cb9a15a4df"
               alt=""
-            />
+            /> */}
           </div>
 
           <div className="textHomeBox">

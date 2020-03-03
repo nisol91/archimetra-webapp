@@ -24,10 +24,10 @@ class App extends Component {
   splash() {
     setTimeout(() => {
       this.setState({ splashScreen: false });
-    }, 2500);
+    }, 3000);
     setTimeout(() => {
       this.setState({ hideSplash: true });
-    }, 3500);
+    }, 4000);
   }
 
   render() {
