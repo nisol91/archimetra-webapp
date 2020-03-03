@@ -71,7 +71,7 @@ class PortfolioSp extends Component {
         { id: 3, name: "PORTFOLIO", ref: "projects", offset: -80 },
         { id: 4, name: "PARTNERS", ref: "partners", offset: -80 },
         { id: 5, name: "IL TEAM", ref: "team", offset: -80 },
-        { id: 6, name: "CONTATTACI", ref: "contacts", offset: 350 }
+        { id: 6, name: "CONTATTACI", ref: "contacts", offset: 500 }
       ]
     };
   }
