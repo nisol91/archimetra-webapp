@@ -88,12 +88,12 @@ class Partners extends Component {
                 ? "2"
                 : "1"
             }
-            dragging="true"
-            swiping="true"
-            wrapAround="true"
-            autoplay="true"
-            autoplayInterval="2000"
-            withoutControls="true"
+            dragging={"true"}
+            swiping={"true"}
+            wrapAround={"true"}
+            autoplay={"true"}
+            autoplayInterval={"2000"}
+            withoutControls={"true"}
           >
             {this.state.firebasePartners.map((project, index) => (
               <React.Fragment key={index}>

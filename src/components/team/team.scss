@@ -76,6 +76,8 @@
 		padding-top: 50px;
 		overflow: hidden;
 		position: relative;
+		transition: 1s;
+
 
 
 		.memberTitle {
@@ -144,6 +146,8 @@
 		&:hover {
 
 			overflow: visible;
+			margin-bottom: 10%;
+			transition: 1s;
 
 
 			.memberStory {

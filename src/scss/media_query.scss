@@ -270,9 +270,9 @@
     }
   }
 
-  .teamPlaceholder {
-    height: 290vh !important;
-  }
+  // .teamPlaceholder {
+  //   height: 290vh !important;
+  // }
 
   .contactSubTitle {
     font-size: 22px !important;
@@ -301,9 +301,7 @@
     width: 95% !important;
   }
 
-  .teamPlaceholder {
-    height: 250vh !important;
-  }
+
 
   .imgFooter {
     width: 15% !important;
@@ -395,9 +393,7 @@
     }
   }
 
-  .teamPlaceholder {
-    height: 450vh !important;
-  }
+
 
   .imgFooter {
     width: 20% !important;
@@ -539,10 +535,6 @@
     height: 220vh !important;
   }
 
-  .teamPlaceholder {
-    height: 400vh !important;
-  }
-
 
   .home1,
   .skills1,
@@ -604,9 +596,7 @@
 }
 
 @media (max-height: 480px) {
-  .teamPlaceholder {
-    height: 500vh !important;
-  }
+
 
   .placeholder {
     height: 120vh !important;

@@ -102,11 +102,11 @@ class Projects extends Component {
                   ? "2"
                   : "1"
               }
-              dragging="true"
-              swiping="true"
-              wrapAround="true"
-              autoplay="true"
-              autoplayInterval="2000"
+              dragging={"true"}
+              swiping={"true"}
+              wrapAround={"true"}
+              autoplay={"true"}
+              autoplayInterval={"2000"}
             >
               {this.state.firebaseProjects.map((project, index) => (
                 <React.Fragment key={index}>
