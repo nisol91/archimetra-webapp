@@ -26,14 +26,11 @@ import { faMobile, faAddressCard } from "@fortawesome/free-solid-svg-icons";
 import firebase from "firebase";
 import LazyLoad from "react-lazyload";
 
-// import header_1 from "../../assets/images/header_1.jpg";
-// import header_2 from "../../assets/images/header_2.jpg";
-// import header_3 from "../../assets/images/header_3.jpg";
-// import header_4 from "../../assets/images/header_4.jpg";
-import header_1 from "../../assets/images/1.jpg";
-import header_2 from "../../assets/images/2.jpg";
-import header_3 from "../../assets/images/3.jpg";
-import header_4 from "../../assets/images/4.jpg";
+import header_1 from "../../assets/images/header_1.jpg";
+import header_2 from "../../assets/images/header_2.jpg";
+import header_3 from "../../assets/images/header_3.jpg";
+import header_4 from "../../assets/images/header_4.jpg";
+
 //inizializzo firebase
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyCDlPVDPih7_MU4U2V43vxgfF2R3se9wxQ",
