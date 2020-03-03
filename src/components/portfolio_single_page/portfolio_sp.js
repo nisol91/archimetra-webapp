@@ -81,9 +81,6 @@ class PortfolioSp extends Component {
   }
 
   componentDidMount() {
-    console.log("====================================");
-    console.log(parseInt(window.innerHeight * 0.85));
-    console.log("====================================");
     setTimeout(() => {
       this.setState({
         cubeVisibility: true,
