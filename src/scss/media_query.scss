@@ -132,6 +132,15 @@
 //================
 
 @media (max-width: 992px) {
+
+
+  .myBtnContact {
+    &:hover {
+      color: white !important;
+      background: $btn-primary-color !important;
+    }
+  }
+
   .arrowText {
     display: none;
   }
