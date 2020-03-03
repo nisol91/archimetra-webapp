@@ -25,6 +25,11 @@ import { faMobile, faAddressCard } from "@fortawesome/free-solid-svg-icons";
 
 import firebase from "firebase";
 
+import header_1 from "../../assets/images/header_1.jpg";
+import header_2 from "../../assets/images/header_2.jpg";
+import header_3 from "../../assets/images/header_3.jpg";
+import header_4 from "../../assets/images/header_4.jpg";
+
 //inizializzo firebase
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyCDlPVDPih7_MU4U2V43vxgfF2R3se9wxQ",
@@ -33,8 +38,8 @@ const firebaseApp = firebase.initializeApp({
   projectId: "archimetra-72c69",
   storageBucket: "archimetra-72c69.appspot.com",
   messagingSenderId: "966185168987",
-  appId: "1:966185168987:web:1f2b552754a6e4ddba4f7e",
-  measurementId: "G-XHPJN8MRBQ"
+  appId: "2:966185168987:web:1f2b552754a6e4ddba4f7e",
+  measurem3ntId: "G-XHPJN8MRBQ"
 });
 const db = firebaseApp.firestore();
 export { db };
@@ -331,26 +336,10 @@ class PortfolioSp extends Component {
 
         <div className="boxHome">
           <div className="imageContainer">
-            {/* <img
-              className="homeImg"
-              src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/ristr%20edif%20rural%202.jpg?alt=media&token=b06a1a06-2111-4a63-892b-0d681f947db6"
-              alt=""
-            />
-            <img
-              className="homeImg"
-              src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/nuova%20villa%20INTERNO%202%20.jpg?alt=media&token=81a841a2-2484-4b16-84db-b4f2a9f935d2"
-              alt=""
-            />
-            <img
-              className="homeImg"
-              src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/nuova%20villa%20NIGHT.jpg?alt=media&token=59fb6b1b-e58f-4688-95fd-428013e9419b"
-              alt=""
-            />
-            <img
-              className="homeImg"
-              src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/ristr%20edif%20rural%204.jpg?alt=media&token=112b7df9-2a82-4ed3-9ffc-a0cb9a15a4df"
-              alt=""
-            /> */}
+            <img className="homeImg" src={header_1} alt="" />
+            <img className="homeImg" src={header_2} alt="" />
+            <img className="homeImg" src={header_3} alt="" />
+            <img className="homeImg" src={header_4} alt="" />
           </div>
 
           <div className="textHomeBox">
