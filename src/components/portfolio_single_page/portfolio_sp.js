@@ -62,7 +62,6 @@ class PortfolioSp extends Component {
       homeVisible: false,
       contactsVisible: false,
       partnersVisible: false,
-
       hideNavbar: true,
 
       navItems: [
@@ -71,14 +70,25 @@ class PortfolioSp extends Component {
         { id: 3, name: "PORTFOLIO", ref: "projects", offset: -80 },
         { id: 4, name: "PARTNERS", ref: "partners", offset: -80 },
         { id: 5, name: "IL TEAM", ref: "team", offset: -80 },
-        { id: 6, name: "CONTATTACI", ref: "contacts", offset: 500 }
+        {
+          id: 6,
+          name: "CONTATTACI",
+          ref: "contacts",
+          offset: parseInt(window.innerHeight * 0.85)
+        }
       ]
     };
   }
 
   componentDidMount() {
+    console.log("====================================");
+    console.log(parseInt(window.innerHeight * 0.85));
+    console.log("====================================");
     setTimeout(() => {
-      this.setState({ cubeVisibility: true, toggleClass: false });
+      this.setState({
+        cubeVisibility: true,
+        toggleClass: false
+      });
       this.notify();
     }, 1500);
     this.fetchProjects();
