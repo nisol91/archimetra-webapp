@@ -24,12 +24,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMobile, faAddressCard } from "@fortawesome/free-solid-svg-icons";
 
 import firebase from "firebase";
+import LazyLoad from "react-lazyload";
 
-import header_1 from "../../assets/images/header_1.jpg";
-import header_2 from "../../assets/images/header_2.jpg";
-import header_3 from "../../assets/images/header_3.jpg";
-import header_4 from "../../assets/images/header_4.jpg";
-
+// import header_1 from "../../assets/images/header_1.jpg";
+// import header_2 from "../../assets/images/header_2.jpg";
+// import header_3 from "../../assets/images/header_3.jpg";
+// import header_4 from "../../assets/images/header_4.jpg";
+import header_1 from "../../assets/images/1.jpg";
+import header_2 from "../../assets/images/2.jpg";
+import header_3 from "../../assets/images/3.jpg";
+import header_4 from "../../assets/images/4.jpg";
 //inizializzo firebase
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyCDlPVDPih7_MU4U2V43vxgfF2R3se9wxQ",
@@ -336,10 +340,12 @@ class PortfolioSp extends Component {
 
         <div className="boxHome">
           <div className="imageContainer">
-            <img className="homeImg" src={header_1} alt="" />
-            <img className="homeImg" src={header_2} alt="" />
-            <img className="homeImg" src={header_3} alt="" />
-            <img className="homeImg" src={header_4} alt="" />
+            <LazyLoad height={200}>
+              <img className="homeImg" src={header_1} alt="" />
+              <img className="homeImg" src={header_2} alt="" />
+              <img className="homeImg" src={header_3} alt="" />
+              <img className="homeImg" src={header_4} alt="" />
+            </LazyLoad>
           </div>
 
           <div className="textHomeBox">
