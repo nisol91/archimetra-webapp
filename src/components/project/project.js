@@ -46,7 +46,10 @@ export default class Project extends Component {
           project: data[0],
           images: data[0].img
         });
-        console.log(this.state.images);
+        // console.log("=====images====");
+        // console.log(this.state.images);
+
+        // this creates an array with all urls of the images, for the image gallery
         var arr = [];
         var len = this.state.images.length;
         for (var i = 0; i < len; i++) {
@@ -59,7 +62,7 @@ export default class Project extends Component {
           imagesForGallery: arr
         });
 
-        console.log(arr);
+        // console.log(arr);
       });
   }
 
@@ -98,9 +101,8 @@ export default class Project extends Component {
     });
     this.fetchProjects(projID);
     setTimeout(() => {
-      console.log("projID=====----");
-
-      console.log(projID);
+      // console.log("projID=====----");
+      // console.log(projID);
     }, 200);
   }
 
@@ -114,6 +116,13 @@ export default class Project extends Component {
       <div className="projBox">
         <div className="projTitle">{this.state.project.name}</div>
         <div className="projDesc">{this.state.project.description}</div>
+        {this.state.images.map((image, index) => (
+          <React.Fragment key={index}>
+            <div className="imageBox">
+              <img src={image} alt="" className="image" />
+            </div>
+          </React.Fragment>
+        ))}
       </div>
     );
   }
