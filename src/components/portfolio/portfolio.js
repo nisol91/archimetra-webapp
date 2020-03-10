@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import Card from "../card/card";
-import "./projects.scss";
+import "./portfolio.scss";
 import { translate } from "react-i18next";
 import { db } from "../portfolio_single_page/portfolio_sp";
 import Carousel from "nuka-carousel";
-import { Link } from "react-router-dom";
 
 import { isMobile } from "react-device-detect";
 
-class Projects extends Component {
+class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.updateDimensions = this.updateDimensions.bind(this);
@@ -85,9 +84,8 @@ class Projects extends Component {
         >
           <h1 className="port1">PORTFOLIO</h1>
           <div className="dottedDiv"></div>
-          <Link to={"/portfolio"} className="mylink">
-            <a className="goToProjects">VAI AL PORTFOLIO</a>
-          </Link>
+
+          <a className="goToProjects">VAI AL PORTFOLIO</a>
         </div>
         <div
           className={`works fade-in ${this.state.projectsVisibility &&
@@ -143,4 +141,4 @@ class Projects extends Component {
     );
   }
 }
-export default translate()(Projects);
+export default translate()(Portfolio);

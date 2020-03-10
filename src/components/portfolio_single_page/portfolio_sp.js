@@ -10,6 +10,8 @@ import About from "../about/about";
 import Team from "../team/team";
 import Partners from "../partners/partners";
 
+import { Link } from "react-router-dom";
+
 import {
   Link as ScrollLink,
   Element,
@@ -357,12 +359,14 @@ class PortfolioSp extends Component {
                 }, 300);
               }}
             >
-              <div
-                className={`myBtnContact ${this.state.toggleClass &&
-                  "swing-in-top-fwd"}`}
-              >
-                SCOPRI I NOSTRI LAVORI
-              </div>
+              <Link to={"/portfolio"} className="mylink">
+                <div
+                  className={`myBtnContact ${this.state.toggleClass &&
+                    "swing-in-top-fwd"}`}
+                >
+                  SCOPRI I NOSTRI LAVORI
+                </div>
+              </Link>
             </ScrollLink>
           </div>
         </div>

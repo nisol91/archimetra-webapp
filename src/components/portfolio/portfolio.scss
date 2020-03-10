@@ -1,0 +1,243 @@
+@import "./src/scss/variables";
+
+//portfolio==========================
+
+.cardsContainer {
+	height: auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.boxPortfolio {
+	width: 100%;
+	height: auto;
+	padding: 120px 10px;
+	padding-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	background: white;
+
+	.works {
+		width: 100% !important;
+		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
+		height: auto;
+		justify-content: center;
+		margin-top: 50px;
+	}
+
+	.textPortfolio {
+		width: 100%;
+		margin-bottom: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		.port1 {
+			font-size: 70px;
+			font-weight: bold;
+		}
+
+		.port2 {
+			font-size: 50px;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+
+		.port3 {
+			font-size: 25px;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+
+		.port4 {
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 50px;
+		}
+	}
+}
+
+.logportBox {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.logosPortfolio {
+	width: 80px;
+	margin: 10px;
+	max-height: 70%;
+	max-width: 50%;
+}
+
+.card_projects {
+	margin: 10px;
+	width: 100px;
+	height: 80px;
+	background: white;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0px 4px 24px -1px rgb(66, 66, 66);
+	}
+}
+
+.linkHover {
+	&:hover {
+		display: inline-block;
+		transform: translateY(-2px);
+		margin: 0 5px;
+	}
+}
+
+.progress {
+	width: 60% !important;
+	margin: auto;
+	margin-top: 20%;
+	height: 5px !important;
+	background: $nav-background-color !important;
+}
+
+.progress-bar {
+	background-color: $link-color !important;
+}
+
+.cardCont {
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.dottedDiv {
+	width: 60vw;
+	height: 20px;
+	border-bottom: 1px dotted grey;
+}
+
+.goToProjects {
+	width: 300px;
+	height: auto;
+	padding: 20px;
+	margin: 20px;
+	color: rgb(63, 63, 63) !important;
+	border: 1px solid rgb(190, 190, 190);
+	border-radius: 50px;
+	font-size: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	cursor: pointer;
+
+	&:hover {
+		transition: 0.5s;
+		background: grey;
+		color: rgb(190, 190, 190) !important;
+	}
+}
+
+//CAROUSEL============
+
+.carouselContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.carouselElement {
+	//   width: 350px;
+	height: 300px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		.hoverDiv {
+			top: 5%;
+			transition: 0.7s;
+		}
+
+		.projectTitle {
+			transition: 0.7s;
+			left: 50% !important;
+			transform: translateX(-50%);
+			opacity: 1;
+		}
+
+		.projectDesc {
+			transition: 0.7s;
+			right: 50% !important;
+			transform: translateX(50%);
+			opacity: 1;
+		}
+	}
+
+	.carouselImg {
+		height: 120%;
+		// height: auto;
+	}
+}
+
+.hoverDiv {
+	transition: 0.7s;
+	transition-timing-function: ease;
+	position: absolute;
+	top: -90%;
+	width: 90%;
+	height: 90%;
+	background: rgba(39, 39, 39, 0.671);
+	z-index: 9997;
+	cursor: pointer;
+
+	.divisorio {
+		width: 50%;
+		height: 5px;
+		border-bottom: 1px solid grey;
+		position: absolute !important;
+		top: 45% !important;
+		left: 50% !important;
+		transform: translateX(-50%);
+	}
+}
+
+.projectTitle {
+	position: absolute !important;
+	top: 35%;
+	left: -45% !important;
+	opacity: 0;
+	transition: 0.7s;
+	width: 100%;
+	text-align: center;
+	font-size: 13px;
+	color: rgb(236, 236, 236);
+	text-transform: uppercase;
+}
+
+.projectDesc {
+	position: absolute !important;
+	top: 50%;
+	right: -45% !important;
+	opacity: 0;
+	transition: 0.7s;
+	font-size: 12px;
+	color: rgb(173, 173, 173);
+	font-style: italic;
+}
+
+.grey {
+	background: grey !important;
+}

@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import PortfolioSp from "./components/portfolio_single_page/portfolio_sp";
 import Project from "./components/project/project";
+import Portfolio from "./components/portfolio/portfolio";
 
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n";
@@ -49,6 +50,7 @@ class App extends Component {
               ) : null}
               <Route exact path="/" component={PortfolioSp} />
               <Route exact path="/project/:projID" component={Project} />
+              <Route exact path="/portfolio" component={Portfolio} />
             </div>
           </div>
         </Router>
