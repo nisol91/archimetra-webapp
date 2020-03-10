@@ -132,7 +132,9 @@
 //================
 
 @media (max-width: 992px) {
-
+  .carouselElement {
+    width: 45% !important;
+  }
 
   .myBtnContact {
     &:hover {
@@ -394,6 +396,14 @@
 //================
 
 @media (max-width: 576px) {
+  .works {
+    justify-content: center !important;
+  }
+
+  .carouselElement {
+    width: 90% !important;
+  }
+
   .presentationDivTeam {
     width: 60% !important;
 

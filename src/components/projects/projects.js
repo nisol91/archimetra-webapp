@@ -86,7 +86,7 @@ class Projects extends Component {
           <h1 className="port1">PORTFOLIO</h1>
           <div className="dottedDiv"></div>
           <Link to={"/portfolio"} className="mylink">
-            <a className="goToProjects">VAI AL PORTFOLIO</a>
+            <div className="goToProjects">VAI AL PORTFOLIO</div>
           </Link>
         </div>
         <div

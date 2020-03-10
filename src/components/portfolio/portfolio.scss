@@ -27,8 +27,9 @@
 		flex-wrap: wrap;
 		overflow: hidden;
 		height: auto;
-		justify-content: center;
+		justify-content: space-between;
 		margin-top: 50px;
+		position: relative;
 	}
 
 	.textPortfolio {
@@ -146,24 +147,18 @@
 	}
 }
 
-//CAROUSEL============
 
-.carouselContainer {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	overflow: hidden;
-}
+
 
 .carouselElement {
-	//   width: 350px;
-	height: 300px;
+	width: 30%;
+	// height: 300px;
 	overflow: hidden;
 	display: flex;
-	justify-content: center;
+	justify-content: space;
 	align-items: center;
+	margin: 30px 5px;
+	position: relative;
 
 	&:hover {
 		.hoverDiv {
@@ -187,7 +182,7 @@
 	}
 
 	.carouselImg {
-		height: 120%;
+		// height: 120%;
 		// height: auto;
 	}
 }

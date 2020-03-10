@@ -4,6 +4,7 @@ import "./portfolio.scss";
 import { translate } from "react-i18next";
 import { db } from "../portfolio_single_page/portfolio_sp";
 import Carousel from "nuka-carousel";
+import { Link } from "react-router-dom";
 
 import { isMobile } from "react-device-detect";
 
@@ -84,58 +85,36 @@ class Portfolio extends Component {
         >
           <h1 className="port1">PORTFOLIO</h1>
           <div className="dottedDiv"></div>
-
-          <a className="goToProjects">VAI AL PORTFOLIO</a>
+          <Link to={"/"} className="mylink">
+            <div className="goToProjects">TORNA ALLA HOME</div>
+          </Link>
         </div>
         <div
           className={`works fade-in ${this.state.projectsVisibility &&
             "visible"}`}
         >
-          <div className="carouselContainer">
-            <Carousel
-              slidesToShow={
-                this.state.width > 1100
-                  ? this.state.width > 1500
-                    ? "4"
-                    : "3"
-                  : this.state.width > 900
-                  ? "2"
-                  : "1"
-              }
-              dragging={"true"}
-              swiping={"true"}
-              wrapAround={"true"}
-              autoplay={"true"}
-              autoplayInterval={"2000"}
-            >
-              {this.state.firebaseProjects.map((project, index) => (
-                <React.Fragment key={index}>
-                  {project.hide == null ? (
-                    <div key={index} className="carouselElement">
-                      <a className="hoverDiv" href="/">
-                        <h1 className="projectTitle">{project.name}</h1>
-                        <div className="divisorio"></div>
-                        <h1 className="projectDesc">{project.description}</h1>
-                      </a>
-                      <img
-                        className="carouselImg"
-                        src={project.img[0]}
-                        alt=""
-                      />
-                    </div>
-                  ) : (
-                    <div className="carouselElement grey">
-                      <a className="hoverDiv" href="/">
-                        <h1 className="projectTitle">{project.name}</h1>
-                        <div className="divisorio"></div>
-                        <h1 className="projectDesc">{project.description}</h1>
-                      </a>
-                    </div>
-                  )}
-                </React.Fragment>
-              ))}
-            </Carousel>
-          </div>
+          {this.state.firebaseProjects.map((project, index) => (
+            <React.Fragment key={index}>
+              {project.hide == null ? (
+                <div key={index} className="carouselElement">
+                  <a className="hoverDiv" href="/">
+                    <h1 className="projectTitle">{project.name}</h1>
+                    <div className="divisorio"></div>
+                    <h1 className="projectDesc">{project.description}</h1>
+                  </a>
+                  <img className="carouselImg" src={project.img[0]} alt="" />
+                </div>
+              ) : (
+                <div className="carouselElement grey">
+                  <a className="hoverDiv" href="/">
+                    <h1 className="projectTitle">{project.name}</h1>
+                    <div className="divisorio"></div>
+                    <h1 className="projectDesc">{project.description}</h1>
+                  </a>
+                </div>
+              )}
+            </React.Fragment>
+          ))}
         </div>
       </div>
     );
