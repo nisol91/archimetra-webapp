@@ -49,8 +49,8 @@ class App extends Component {
                 </div>
               ) : null}
               <Route exact path="/" component={PortfolioSp} />
-              <Route exact path="/project/:projID" component={Project} />
               <Route exact path="/portfolio" component={Portfolio} />
+              <Route exact path="/portfolio/:projID" component={Project} />
             </div>
           </div>
         </Router>

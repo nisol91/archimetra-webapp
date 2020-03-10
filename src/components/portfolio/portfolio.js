@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Card from "../card/card";
 import "./portfolio.scss";
 import { translate } from "react-i18next";
 import { db } from "../portfolio_single_page/portfolio_sp";
@@ -96,21 +95,31 @@ class Portfolio extends Component {
           {this.state.firebaseProjects.map((project, index) => (
             <React.Fragment key={index}>
               {project.hide == null ? (
-                <div key={index} className="carouselElement">
-                  <a className="hoverDiv" href="/">
+                <Link
+                  to={{
+                    pathname: `/portfolio/${project.index}`,
+                    state: {
+                      name: project.name,
+                      description: project.description,
+                      img: project.img[0]
+                    }
+                  }}
+                  className="carouselElement"
+                >
+                  <div className="hoverDiv" href="/">
                     <h1 className="projectTitle">{project.name}</h1>
                     <div className="divisorio"></div>
                     <h1 className="projectDesc">{project.description}</h1>
-                  </a>
+                  </div>
                   <img className="carouselImg" src={project.img[0]} alt="" />
-                </div>
+                </Link>
               ) : (
                 <div className="carouselElement grey">
-                  <a className="hoverDiv" href="/">
+                  <div className="hoverDiv" href="/">
                     <h1 className="projectTitle">{project.name}</h1>
                     <div className="divisorio"></div>
                     <h1 className="projectDesc">{project.description}</h1>
-                  </a>
+                  </div>
                 </div>
               )}
             </React.Fragment>
