@@ -66,12 +66,11 @@ export default class Project extends Component {
   async countProjects() {
     await db
       .collection("projects")
-      .where("id", ">", "0")
       .get()
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
-        console.log("=====QUANTI PROGETTI?====");
-        console.log(data.length);
+        // console.log("=====QUANTI PROGETTI?====");
+        // console.log(data.length);
         this.setState({ projectLenght: data.length });
       });
   }
@@ -107,14 +106,14 @@ export default class Project extends Component {
 
   componentDidMount() {
     this.setProjId();
-    // this.countProjects();
+    this.countProjects();
   }
 
   render() {
     return (
       <div className="projBox">
-        progetto
-        {this.state.name}
+        <div className="projTitle">{this.state.project.name}</div>
+        <div className="projDesc">{this.state.project.description}</div>
       </div>
     );
   }
