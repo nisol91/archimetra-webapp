@@ -113,25 +113,35 @@ class Projects extends Component {
               {this.state.firebaseProjects.map((project, index) => (
                 <React.Fragment key={index}>
                   {project.hide == null ? (
-                    <div key={index} className="carouselElementSlider">
-                      <a className="hoverDiv" href="/">
+                    <Link
+                      to={{
+                        pathname: `/portfolio/${project.index}`,
+                        state: {
+                          name: project.name,
+                          description: project.description,
+                          img: project.img[0]
+                        }
+                      }}
+                      className="carouselElementSlider"
+                    >
+                      <div className="hoverDiv" href="/">
                         <h1 className="projectTitle">{project.name}</h1>
                         <div className="divisorio"></div>
                         <h1 className="projectDesc">{project.description}</h1>
-                      </a>
+                      </div>
                       <img
                         className="carouselImg"
                         src={project.img[0]}
                         alt=""
                       />
-                    </div>
+                    </Link>
                   ) : (
                     <div key={index} className="carouselElementSlider">
-                      <a className="hoverDiv" href="/">
+                      <div className="hoverDiv" href="/">
                         <h1 className="projectTitle">{project.name}</h1>
                         <div className="divisorio"></div>
                         <h1 className="projectDesc">{project.description}</h1>
-                      </a>
+                      </div>
                       <img className="carouselImg" src="/" alt="" />
                     </div>
                   )}
