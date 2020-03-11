@@ -113,7 +113,7 @@ class Projects extends Component {
               {this.state.firebaseProjects.map((project, index) => (
                 <React.Fragment key={index}>
                   {project.hide == null ? (
-                    <div key={index} className="carouselElement">
+                    <div key={index} className="carouselElementSlider">
                       <a className="hoverDiv" href="/">
                         <h1 className="projectTitle">{project.name}</h1>
                         <div className="divisorio"></div>
@@ -126,7 +126,7 @@ class Projects extends Component {
                       />
                     </div>
                   ) : (
-                    <div key={index} className="carouselElement">
+                    <div key={index} className="carouselElementSlider">
                       <a className="hoverDiv" href="/">
                         <h1 className="projectTitle">{project.name}</h1>
                         <div className="divisorio"></div>

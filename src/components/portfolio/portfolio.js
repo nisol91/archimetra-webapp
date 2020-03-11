@@ -111,15 +111,24 @@ class Portfolio extends Component {
                     <div className="divisorio"></div>
                     <h1 className="projectDesc">{project.description}</h1>
                   </div>
-                  <img className="carouselImg" src={project.img[0]} alt="" />
+                  <img
+                    className="carouselImgPortfolio"
+                    src={project.img[0]}
+                    alt=""
+                  />
                 </Link>
               ) : (
-                <div className="carouselElement grey">
-                  <div className="hoverDiv" href="/">
+                <div key={index} className="carouselElement">
+                  <a className="hoverDiv" href="/">
                     <h1 className="projectTitle">{project.name}</h1>
                     <div className="divisorio"></div>
                     <h1 className="projectDesc">{project.description}</h1>
-                  </div>
+                  </a>
+                  <img
+                    className="carouselImgPortfolio"
+                    src="https://firebasestorage.googleapis.com/v0/b/archimetra-72c69.appspot.com/o/archimetra_logo.png?alt=media&token=2c8ae350-b677-4aab-a10a-00e98ffa6033"
+                    alt=""
+                  />
                 </div>
               )}
             </React.Fragment>

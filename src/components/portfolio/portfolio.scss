@@ -152,13 +152,14 @@
 
 .carouselElement {
 	width: 30%;
-	// height: 300px;
+	height: 300px;
 	overflow: hidden;
 	display: flex;
-	justify-content: space;
+	justify-content: center;
 	align-items: center;
 	margin: 30px 5px;
 	position: relative;
+	max-width: 450px;
 
 	&:hover {
 		.hoverDiv {
@@ -181,8 +182,8 @@
 		}
 	}
 
-	.carouselImg {
-		// height: 120%;
+	.carouselImgPortfolio {
+		height: 120%;
 		// height: auto;
 	}
 }
