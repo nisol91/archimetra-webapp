@@ -126,12 +126,13 @@ class Projects extends Component {
                       />
                     </div>
                   ) : (
-                    <div className="carouselElement grey">
+                    <div key={index} className="carouselElement">
                       <a className="hoverDiv" href="/">
                         <h1 className="projectTitle">{project.name}</h1>
                         <div className="divisorio"></div>
                         <h1 className="projectDesc">{project.description}</h1>
                       </a>
+                      <img className="carouselImg" src="/" alt="" />
                     </div>
                   )}
                 </React.Fragment>
