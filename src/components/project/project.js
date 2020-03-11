@@ -27,7 +27,8 @@ export default class Project extends Component {
       showGallery: false,
       imagesForGallery: [],
       showVideo: false,
-      name: ""
+      name: "",
+      content: []
     };
     this.handleImageLoaded = this.handleImageLoaded.bind(this);
     this.changeProj = this.changeProj.bind(this);
@@ -41,9 +42,10 @@ export default class Project extends Component {
       .then(querySnapshot => {
         const data = querySnapshot.docs.map(doc => doc.data());
         console.log("=====PROJECTS in project====");
-        console.log(data[0]);
+        console.log(data[0].content);
         this.setState({
           project: data[0],
+          content: data[0].content,
           images: data[0].img
         });
         // console.log("=====images====");
@@ -114,15 +116,42 @@ export default class Project extends Component {
   render() {
     return (
       <div className="projBox">
-        <div className="projTitle">{this.state.project.name}</div>
-        <div className="projDesc">{this.state.project.description}</div>
-        {this.state.images.map((image, index) => (
-          <React.Fragment key={index}>
-            <div className="imageBox">
-              <img src={image} alt="" className="image" />
-            </div>
-          </React.Fragment>
-        ))}
+        <div className="textContainer">
+          <div className="projTitle titleProj">{this.state.project.name}</div>
+          <div className="projDesc subtitleProj">
+            {this.state.project.description}
+          </div>
+          <div className="projCont">
+            <span className="boldProj">Anno:</span> {this.state.content[0]}
+          </div>
+          <div className="projCont">
+            <span className="boldProj">Realizzazione:</span>{" "}
+            {this.state.content[1]}
+          </div>
+          <div className="projCont">
+            <span className="boldProj">Superficie:</span>{" "}
+            {this.state.content[2]}
+          </div>
+          <div className="projCont">
+            <span className="boldProj">Committente:</span>{" "}
+            {this.state.content[3]}
+          </div>
+          <div className="projCont">
+            <span className="boldProj">Prestazione:</span>{" "}
+            {this.state.content[4]}
+          </div>
+          <div className="projCont">{this.state.content[5]}</div>
+        </div>
+
+        <div className="imagesContainer">
+          {this.state.images.map((image, index) => (
+            <React.Fragment key={index}>
+              <div className="imageBox">
+                <img src={image} alt="" className="image" />
+              </div>
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     );
   }

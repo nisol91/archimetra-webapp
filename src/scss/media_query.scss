@@ -329,12 +329,7 @@
     transition: 1s;
   }
 
-  .projCont {
-    width: 100% !important;
-    flex-direction: column !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
+  .projCont {}
 
   .titleProj,
   .imgContainer {
@@ -398,6 +393,18 @@
 @media (max-width: 576px) {
   .works {
     justify-content: center !important;
+  }
+
+  .projBox {
+    flex-wrap: wrap !important;
+  }
+
+  .textContainer {
+    width: 100% !important;
+  }
+
+  .imagesContainer {
+    width: 100% !important;
   }
 
   .carouselElement {
