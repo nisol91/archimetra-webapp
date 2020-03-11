@@ -102,6 +102,9 @@
 		.memberStory {
 			position: absolute;
 			top: 1000px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
 			font-size: 12px;
 			padding: 15px;
 			text-align: center;
