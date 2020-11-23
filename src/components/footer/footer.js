@@ -54,7 +54,7 @@ class Footer extends Component {
   onDismiss() {
     this.setState({ visible: false });
   }
-  componentDidMount() {}
+  componentDidMount() { }
   render() {
     const { t } = this.props;
 
@@ -79,7 +79,7 @@ class Footer extends Component {
           <h5 className="footerText">Brewed by</h5>
           <a
             className="nsLink"
-            href="https://nszdeveloper.com/"
+            href="https://nszdev.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
