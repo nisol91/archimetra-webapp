@@ -3,7 +3,6 @@
 const mongoose = require("mongoose");
 const express = require("express");
 var cors = require("cors");
-const bodyParser = require("body-parser");
 // const logger = require("morgan");
 // const Data = require("./data");
 
@@ -32,8 +31,7 @@ db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 // (optional) only made for logging and
 // bodyParser, parses the request body to be a readable json format
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.json());
 // app.use(logger("dev"));
 
 app.use("/business", businessRoute);
@@ -41,7 +39,7 @@ app.use("/project", projectRoute);
 app.use("/form", formRoute);
 
 // launch our backend into a port
-app.listen(API_PORT, () => // console.log(`LISTENING ON PORT ${API_PORT}`));
+app.listen(API_PORT, () => {console.log('server up')})// console.log(`LISTENING ON PORT ${API_PORT}`));
 
 //=============connection to cloud mongoDbAtlas Cluster
 
